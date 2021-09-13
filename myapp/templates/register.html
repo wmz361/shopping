@@ -9,7 +9,7 @@
     <div class="top"></div>
     <div class="one">
         <div class="two">
-            <img src="apps/v1/static/image/清明上河图.png"/>
+            <img src="myapp/static/image/清明上河图.png"/>
         </div>
 
         <div class="three">
@@ -17,38 +17,38 @@
             <form action="login.html" method="get" style="position: fixed;top:30%;left: 66%;width:800px;height:200px;line-height:55px">
                 <table border="0">
                     <tr>
-					<td><label for="firstname">用户名：</label></td>
-					<td><input type="text" name="firstname" id="firstname"value="" class="mytxt" /></td>
+					<td><label for="username">用户名：</label></td>
+					<td><input type="text" name="username" id="username" value="" class="mytxt" /></td>
 				</tr>
 				<tr>
 					<td><label for="password">密 码：</label></td>
-					<td><input type="password" name="password"pattern="^[a-zA-Z]\w{5,17}$" id="password" value="" class="mytxt"  />（至少包含6个字符）</td>
+					<td><input type="password" name="password" id="password" value="" class="mytxt"  />（至少包含6个字符）</td>
 				</tr>
 				<tr>
 					<td><label for="password2">再次输入密码：</label></td>
-					<td><input type="password" name="password2"pattern="^[a-zA-Z]\w{5,17}$" id="password2" value=""  class="mytxt" /></td>
+					<td><input type="password" name="password2" id="password2" value=""  class="mytxt" /></td>
 				</tr>
 				<tr>
-					<td><label for="myEmail">手机号：</label></td>
-					<td><input type="text" name="myEmail" id="myEmail" value=""  class="mytxt" /></td>
+					<td><label for="phone_num">手机号：</label></td>
+					<td><input type="text" name="phone_num" id="phone_num" value=""  class="mytxt" /></td>
 				</tr>
 
 				<tr>
 					<td><label>性别：</label></td>
 					<td>
-						<input type="radio" name="sex" value="male"/>&nbsp;&nbsp;<label>男</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-						<input type="radio" name="sex" value="female"/>&nbsp;&nbsp;<label>女</label>
+						<input type="radio" name="gender" value="male"/>&nbsp;&nbsp;<label>男</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<input type="radio" name="gender" value="female"/>&nbsp;&nbsp;<label>女</label>
 					</td>
 				</tr>
                 <tr>
                 <td><label>出生日期：</label></td>
                 <td>
-                    <input type="date" size="1" name="year" placeholder="yyyy" value=""  class="mytxt" />
+                    <input type="date" size="1" name="brithday" placeholder="yyyy" value=""  class="mytxt" />
                 </td>
 				</tr>
                 </table>
-                <input type="submit" value="提 交" class="button"  /> &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;
-                <input type="submit" value="取 消" class="button"  />
+                <input type="submit" name="submit" value="提 交" class="button"  /> &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="submit" name="cancel" value="取 消" class="button"  />
             </form>
         </div>
      </div>

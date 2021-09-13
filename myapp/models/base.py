@@ -54,6 +54,6 @@ class Base(db.Model):
                 setattr(self, key, value)
 
 
-class BaseNoCreateTime(db.Model):
-    __abstract__ = True
-    status = Column(SmallInteger, default=1)
+
+
+

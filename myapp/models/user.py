@@ -1,5 +1,5 @@
 from sqlalchemy import Column, Integer, String, SmallInteger, Boolean, Float, UnicodeText, LargeBinary
-from myapp.model.base import Base
+from myapp.models.base import Base
 
 class User(Base):
     __tablename__ = 'user'
@@ -12,3 +12,6 @@ class User(Base):
     sign=Column(UnicodeText)
     Avatar=Column(LargeBinary)
     _password = Column('password', String(100))
+
+
+
