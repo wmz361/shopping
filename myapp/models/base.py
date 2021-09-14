@@ -29,7 +29,6 @@ class Query(BaseQuery):
 
 db = SQLAlchemy(query_class=Query)
 
-
 class Base(db.Model):
     __abstract__ = True
     create_time = Column('create_time', Integer)

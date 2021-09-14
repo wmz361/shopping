@@ -10,7 +10,7 @@ class PendingStatus(Enum):
     success = 2
     reject = 3
     redraw = 4
-    # gifter_redraw = 5
+
 
     @classmethod
     def pending_str(cls, status, key):

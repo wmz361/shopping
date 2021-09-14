@@ -2,6 +2,7 @@ from sqlalchemy import Column, Integer, String, SmallInteger, Boolean, Float, Un
 from myapp.models.base import Base
 
 class User(Base):
+
     __tablename__ = 'user'
     id = Column(Integer, primary_key=True)
     username = Column(String(24), nullable=False)
@@ -11,7 +12,10 @@ class User(Base):
     gender=Column(SmallInteger,default=0)
     sign=Column(UnicodeText)
     Avatar=Column(LargeBinary)
-    _password = Column('password', String(100))
+    password = Column('password', String(100))
+
+
+
 
 
 

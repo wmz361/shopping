@@ -1,4 +1,8 @@
-from flask import Blueprint, render_template, request, redirect, url_for
+from flask import Blueprint, render_template, request, redirect, url_for, flash
+
+from myapp.forms.register import RegisterForm
+from myapp.models.base import db
+from myapp.models.user import User
 
 indexBP=Blueprint('indexBP',__name__)
 
@@ -8,20 +12,19 @@ def index():
 
 @indexBP.route('/register', methods=['GET','POST'])
 def register():
+    form=RegisterForm()
+    user = User()
     if request.method == 'POST':
-        username=request.form['firstname']
-        password=request.form['password']
-        password2=request.form['password2']
-        phone_num=request.form['phone_num']
-        gender=request.form['gender']
-        brithday=request.form['brithday']
-        print(username)
-        print(password)
-        print(password2)
-        print(phone_num)
-        print(gender)
-        print(brithday)
-        return redirect(url_for('indexBP.login'))
+        user.username=form.username.data
+        user.password=form.password1.data
+        user.phone_num=request.form['phone_num']
+        user.gender=request.form['gender']
+        user.birthday=request.form['birthday']
+        db.session.add(user)
+        db.session.commit()
+        print(user.username)
+        flash('注册成功，跳转至首页！')
+        return redirect(url_for('indexLogin'))
     return render_template('register.html')
 
 @indexBP.route('/login', methods=['GET','POST'])
@@ -30,4 +33,8 @@ def login():
         pass
     return render_template('login.html')
 
+@indexBP.route('/indexLogin', methods=['GET','POST'])
+def indexLogin():
+    name=request.form['username']
+    return render_template('indexLogined.html',username=name)
 

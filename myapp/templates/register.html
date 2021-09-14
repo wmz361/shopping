@@ -6,15 +6,16 @@
     <title>注册</title>
 </head>
 <body hight=100%>
+<script type="text/javascript" src="../static/js/login.js"></script>
     <div class="top"></div>
     <div class="one">
         <div class="two">
-            <img src="myapp/static/image/清明上河图.png"/>
+            <img src="../static/image/清明上河图.png"/>
         </div>
 
         <div class="three">
 
-            <form action="login.html" method="get" style="position: fixed;top:30%;left: 66%;width:800px;height:200px;line-height:55px">
+            <form name="form1" method="post" style="position: fixed;top:30%;left: 66%;width:800px;height:200px;line-height:55px">
                 <table border="0">
                     <tr>
 					<td><label for="username">用户名：</label></td>
@@ -22,7 +23,7 @@
 				</tr>
 				<tr>
 					<td><label for="password">密 码：</label></td>
-					<td><input type="password" name="password" id="password" value="" class="mytxt"  />（至少包含6个字符）</td>
+					<td><input type="password" name="password" pattern="{6,}" id="password" value="" class="mytxt"  />（至少包含6个字符）</td>
 				</tr>
 				<tr>
 					<td><label for="password2">再次输入密码：</label></td>
@@ -30,7 +31,7 @@
 				</tr>
 				<tr>
 					<td><label for="phone_num">手机号：</label></td>
-					<td><input type="text" name="phone_num" id="phone_num" value=""  class="mytxt" /></td>
+					<td><input type="text" name="phone_num"  id="phone_num" value=""  class="mytxt" /></td>
 				</tr>
 
 				<tr>
@@ -43,12 +44,12 @@
                 <tr>
                 <td><label>出生日期：</label></td>
                 <td>
-                    <input type="date" size="1" name="brithday" placeholder="yyyy" value=""  class="mytxt" />
+                    <input type="date" size="1" name="birthday" placeholder="yyyy" value=""  class="mytxt" />
                 </td>
 				</tr>
                 </table>
-                <input type="submit" name="submit" value="提 交" class="button"  /> &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;
-                <input type="submit" name="cancel" value="取 消" class="button"  />
+                <input type="submit" name="submit" value="提 交" class="button" onclick="toindex()" /> &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="submit" name="cancel" value="重 置" class="button" onclick="cancel()" />
             </form>
         </div>
      </div>
