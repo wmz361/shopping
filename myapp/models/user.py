@@ -1,5 +1,8 @@
 from sqlalchemy import Column, Integer, String, SmallInteger, Boolean, Float, UnicodeText, LargeBinary
-from myapp.models.base import Base
+from werkzeug.security import generate_password_hash
+
+from myapp.models.base import  Base
+
 
 class User(Base):
 
@@ -12,7 +15,16 @@ class User(Base):
     gender=Column(SmallInteger,default=0)
     sign=Column(UnicodeText)
     Avatar=Column(LargeBinary)
-    password = Column('password', String(100))
+    _password = Column('password', String(128))
+
+    @property
+    def password(self):
+        return self._password
+
+
+    @password.setter
+    def password(self,raw):
+        self._password=generate_password_hash(raw)
 
 
 
