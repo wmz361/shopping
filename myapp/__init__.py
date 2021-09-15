@@ -1,6 +1,6 @@
 from flask import Flask
 from myapp.models.base import db
-from myapp.web import webBP
+from myapp.web.index import webBP
 
 
 def create_app():
