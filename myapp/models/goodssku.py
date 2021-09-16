@@ -10,4 +10,4 @@ class GoodsSku(Base):
     skuid=Column(Integer, primary_key=True)
     skuname = Column(String(24), nullable=False)
     skufatherid = Column(Integer, primary_key=True)
-    bramdid = Column(Integer, primary_key=True)
+    brandid = Column(Integer, primary_key=True)

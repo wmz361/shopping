@@ -7,6 +7,6 @@ function cancel(){
     document.form1.submit();
 }
 function toRegister(){
-    document.form1.action="./register.html";
+    document.form1.action={{url_for('webBP.register')}};
     document.form1.submit();
 }

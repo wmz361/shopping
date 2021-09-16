@@ -21,7 +21,6 @@ class User(Base):
     def password(self):
         return self._password
 
-
     @password.setter
     def password(self,raw):
         self._password=generate_password_hash(raw)

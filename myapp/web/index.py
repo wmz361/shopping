@@ -1,5 +1,7 @@
 # coding=utf-8
 from flask import  render_template, request, redirect, url_for, flash
+from flask_login import login_required
+
 from myapp.forms.register import RegisterForm
 from myapp.models.base import db
 from myapp.models.user import User
@@ -19,23 +21,41 @@ def register():
         user = User()
         user.username=form['username']
         user.password = form['password']
-        user.gender=form['gender']
+        if form['gender']=='1':
+            user.gender=1
+        else:
+            user.gender=0
         user.phone_num=form['phone_num']
         user.birthday=form['birthday']
         db.session.add(user)
         db.session.commit()
         flash('注册成功，跳转至首页！')
-        return redirect(url_for('webBP.indexLogin'))
+        return redirect(url_for('webBP.indexLogin',uname=form['username']))
     return render_template('register.html',form=form)
 
 @webBP.route('/login', methods=['GET','POST'])
 def login():
+    form = request.form
     if request.method == 'POST':
-        pass
+        user=User()
+        users = user.query.filter_by(username=form['username']).first()
+        if users:
+            flash('登录成功！')
+            return redirect(url_for('webBP.indexLogin',uname=form['username']))
+        else:
+            flash('用户没有注册，请先注册')
     return render_template('login.html')
 
-@webBP.route('/indexLogin', methods=['GET','POST'])
+@webBP.route('/indexLogin/?', methods=['GET','POST'])
 def indexLogin():
+    uname=request.args.get('uname')
+    if request.method=='GET':
+        return render_template('indexLogined.html',username=uname)
+    return '跳转首页失败'
+
+@webBP.route('/test', methods=['GET','POST'])
+@login_required
+def test():
     if request.method=='GET':
         return render_template('indexLogined.html')
     return '跳转首页失败'
