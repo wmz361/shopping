@@ -50,13 +50,13 @@ def login():
 def indexLogin():
     uname=request.args.get('uname')
     if request.method=='GET':
-        return render_template('indexLogined.html',username=uname)
+        return render_template('indexLogined1.html',username=uname)
     return '跳转首页失败'
 
 @webBP.route('/test', methods=['GET','POST'])
 @login_required
 def test():
     if request.method=='GET':
-        return render_template('indexLogined.html')
+        return render_template('indexLogined1.html')
     return '跳转首页失败'
 

@@ -1,5 +1,5 @@
 function toindex(){
-    // document.form1.action="./indexLogined.html";
+    // document.form1.action="./indexLogined1.html";
     document.form1.submit();
 }
 function cancel(){
