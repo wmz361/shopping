@@ -50,7 +50,12 @@ def login():
 def indexLogin():
     uname=request.args.get('uname')
     if request.method=='GET':
-        return render_template('indexLogined1.html',username=uname)
+        good1={'title':'商品1',"price":25}
+        good2 = {'title': '商品2', "price": 30}
+        goods=[]
+        goods.append(good1)
+        goods.append(good2)
+        return render_template('indexLogined1.html',username=uname,goods=goods)
     return '跳转首页失败'
 
 @webBP.route('/test', methods=['GET','POST'])

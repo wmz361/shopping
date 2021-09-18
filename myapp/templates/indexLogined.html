@@ -1,14 +1,27 @@
-{% extends "../base/base.html" %}
-{% block title %}首页{% endblock %}
-{% block head %}
-    {{ super() }}
-    <style type="text/css">
-        .important { color: #336699; }
-    </style>
-{% endblock %}
-{% block content %}
-    <h1>Index</h1>
-    <p class="important">
-      Welcome on my awesome homepage.
-    </p>
-{% endblock %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<button type="button" onclick="dianwo()">添加店铺</button>
+		<div class="zhezhao" id='zhezhao'>
+			<div class="tankuang">
+				<div id="header">
+					<span>我是弹窗</span>
+					<div id="header-right" onclick="hidder()">x</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			document.getElementById('zhezhao').style.display="none";
+			function dianwo(){
+				document.getElementById('zhezhao').style.display="";
+			}
+			function hidder(){
+				document.getElementById('zhezhao').style.display="none";
+			}
+		</script>
+	</body>
+</html>

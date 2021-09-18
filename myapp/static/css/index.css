@@ -36,6 +36,14 @@
             background: rgb(228,223,215);
              border-radius: 5px 0px 0px 5px;
         }
+         .goods {
+            width: 23.5%;
+            height: 44%;
+            float:left;
+            background: rgb(229,211,170);
+             border-radius: 5px 0px 0px 5px;
+        }
+
          .three {
             width: 30%;
             height: 70%;

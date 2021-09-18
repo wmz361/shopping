@@ -19,7 +19,7 @@
     <a class="button" align="center" style="float:right" href="shoppingCart.html"> 购物车</a>
     <div class="box" style="float:right">
       <input class="input" type="text" name="" placeholder="请输入商品内容">
-    <a class="search" href="https://www.baidu.com" >
+    <a class="search" href="#" >
         <i class="search">搜 索</i>
     </a>
  </div>
@@ -27,9 +27,41 @@
 <div class="top2"></div>
 <div class="left"></div>
 <div class="right">
-    <a class="button" align="center" style="float:left"  href="">推 荐</a>
-    <a class="button" align="center" style="float:left"  href="">销 量</a>
-    <a class="button" align="center" style="float:left" href=""> 最 新</a>
+    <a class="button" align="center" style="float:left"  href="#">推 荐</a>
+    <a class="button" align="center" style="float:left"  href="#">销 量</a>
+    <a class="button" align="center" style="float:left" href="#"> 最 新</a>
+    <table>
+    <tbody>
+<!--    {% for good in goods %}-->
+           <td class="goods" style="border:10px solid rgb(228,223,215);">
+               <img src="../static/image/清明上河图.png" style="height: 70%"/>
+              <span>{{ goods['title'] }}</span>
+              <span>{{ goods['price'] }}</span>
+            </td>
+    <td class="goods" style="border:10px solid rgb(228,223,215);">
+        <img src="../static/image/清明上河图.png" style="height: 70%"/>
+              <span>{{ goods['title'] }}</span>
+              <span>{{ goods['price'] }}</span>
+            </td>
+     <td class="goods" style="border:10px solid rgb(228,223,215);">
+         <img src="../static/image/清明上河图.png" style="height: 70%"/>
+              <span>{{ goods['title'] }}</span>
+              <span>{{ goods['price'] }}</span>
+            </td>
+     <td class="goods" style="border:10px solid rgb(228,223,215);">
+         <img src="../static/image/清明上河图.png" style="height: 70%"/>
+              <span>{{ goods['title'] }}</span>
+              <span>{{ goods['price'] }}</span>
+            </td>
+     <td class="goods" style="border:10px solid rgb(228,223,215);">
+         <img src="../static/image/清明上河图.png" style="height: 70%"/>
+              <span>{{ goods['title'] }}</span>
+              <span>{{ goods['price'] }}</span>
+            </td>
+<!--        {% endfor %}-->
+    </tbody>
+</table>
+
 </div>
 </body>
 </html>

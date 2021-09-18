@@ -14,5 +14,5 @@ def create_app():
     db.create_all(app=app)
     @app.route('/hello')
     def hello():
-        return 'Hello, World!'
+        return 'hello world!'
     return app
