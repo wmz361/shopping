@@ -1,6 +1,6 @@
 # coding=utf-8
 from flask import  render_template, request, redirect, url_for, flash
-from flask_login import login_required
+# from flask_login import login_required
 
 from myapp.forms.register import RegisterForm
 from myapp.models.base import db
@@ -55,13 +55,13 @@ def indexLogin():
         goods=[]
         goods.append(good1)
         goods.append(good2)
-        return render_template('indexLogined1.html',username=uname,goods=goods)
+        goodssku=['种类1','种类2','种类3','种类4']
+        return render_template('indexLogined1.html',username=uname,goods=goods,goodssku=goodssku)
     return '跳转首页失败'
 
-@webBP.route('/test', methods=['GET','POST'])
-@login_required
+@webBP.route('/Merchant', methods=['GET','POST'])
 def test():
     if request.method=='GET':
-        return render_template('indexLogined1.html')
+        return render_template('Merchant.html')
     return '跳转首页失败'
 

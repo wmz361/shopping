@@ -43,6 +43,17 @@
             background: rgb(229,211,170);
              border-radius: 5px 0px 0px 5px;
         }
+        .goodssku {
+            width: 100%;
+            height: 7%;
+            float:left;
+            background: rgb(229,211,170);
+            border-bottom:2px solid rgb(255,255,255);
+            font-size: 15px;
+            color: #333333;
+            line-height:50px;
+
+        }
 
          .three {
             width: 30%;

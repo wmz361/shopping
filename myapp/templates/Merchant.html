@@ -8,10 +8,10 @@
 <body>
 <div class="top1" >
     <span class="text1" align="center" style="float:right" >欢迎您！吴大喜 </span>
-    <a class="text1" align="center" style="float:left" href="" > 店铺管理 </a>
+    <a class="text1" align="center" style="float:left" href="" > 品牌管理 </a>
     <a class="text1" align="center" style="float:left" href="" > 商品管理 </a>
     <a class="text1" align="center" style="float:left" href="" > 订单管理 </a>
-    <a class="text1" align="center" style="float:left" href="" > 店铺数据分析 </a>
+    <a class="text1" align="center" style="float:left" href="" > 品牌数据分析 </a>
     <a class="text1" align="center" style="float:left" href=""> 产品数据分析 </a>
     <div class="box" style="float:right">
       <input class="input" type="text" name="" placeholder="请输入商品内容">
@@ -21,22 +21,53 @@
  </div>
 </div>
 <div class="left">
-        <a class="userCenter" align="center" href=""> 运营中店铺 </a>
-        <a class="userCenter" align="center" href=""> 店铺申请 </a>
-        <a class="userCenter" align="center" href=""> 店铺回收站 </a>
+        <a class="userCenter" align="center" href=""> 运营中品牌 </a>
+        <a class="userCenter" align="center" href=""> 品牌申请 </a>
+        <a class="userCenter" align="center" href=""> 品牌回收站 </a>
 </div>
 <div class="right">
-    <button type="button" class="button" onclick="dianwo()">添加店铺</button>
+    <button type="button" class="button" onclick="dianwo()">添加品牌</button>
     <div class="zhezhao" id='zhezhao'>
 			<div class="tankuang">
+                <form name="form1" method="post" class="form1" enctype="multipart/form-data">
+                <table border="0">
+                    <tr>
+					<td><label for="brandname" >品牌名称：</label></td>
+					<td><input type="text" name="username" id="brandname" value="" class="mytxt" /></td>
+				</tr>
+				<tr>
+					<td><label for="declaration"> 品牌宣言：</label></td>
+					<td><input type="text" name="declaration" id="declaration" value="" class="mytxt" /></td>
+				</tr>
+                <tr>
+					<td><label for="logo"> 品牌logo：</label></td>
+					<td><input type="file" name="logo" id="logo" value="" class="mytxt" /></td>
+				</tr>
+                <tr>
+					<td><label for="brandstory"> 品牌故事：</label></td>
+                    <td><textarea name="brandstory" id="brandstory" class="mytxt" style="height:40px;"></textarea></td>
+				</tr>
+                <tr>
+					<td><label for="brandurl"> 品牌主页url：</label></td>
+					<td><input type="text" name="brandurl" id="brandurl" value="" class="mytxt" /></td>
+				</tr>
+                <tr>
+					<td><label for="phone_num"> 品牌联系方式：</label></td>
+					<td><input type="text" name="phone_num" id="phone_num" value="" class="mytxt" /></td>
+				</tr>
+                </table>
+                    <br>
+                <input type="submit" value="重 置"  class="button" onclick="toRegister()" style="float:right" /> &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="submit" value="新 建" class="button" style="float:right"/> &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </form>
 				<div id="header">
-					<span>添加店铺</span>
+					<span style="color:rgb(228,223,215) line-height:30px;">添加品牌</span>
 					<div id="header-right" onclick="hidder()">x</div>
 				</div>
 			</div>
 		</div>
     </div>
-<div class="footer"></div>
+<!--<div class="footer"></div>-->
 <script type="text/javascript">
 			document.getElementById('zhezhao').style.display="none";
 			function dianwo(){

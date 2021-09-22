@@ -10,7 +10,7 @@
     <div class="dropdown" align="center" style="float:right" >
         <button class="button" align="center" style="float:right">更 多</button>
         <div class="dropdown-content">
-            <a href="Merchant.html">后 台</a>
+            <a href="{{ url_for('MerchantBP.Merchant')}}">后 台</a>
             <a href="userCenter.html">用户中心</a>
             <a href="login.html">退出登录</a>
         </div>
@@ -25,43 +25,32 @@
  </div>
 </div>
 <div class="top2"></div>
-<div class="left"></div>
+<div class="left">
+     <table>
+    <tbody>
+    {% for goodsku in goodssku %}
+           <td class="goodssku" align="center">
+              <a href="#" style="color: #333333;">{{ goodsku }}</a>
+            </td>
+        {% endfor %}
+    </tbody>
+     </table>
+</div>
 <div class="right">
     <a class="button" align="center" style="float:left"  href="#">推 荐</a>
     <a class="button" align="center" style="float:left"  href="#">销 量</a>
     <a class="button" align="center" style="float:left" href="#"> 最 新</a>
     <table>
     <tbody>
-<!--    {% for good in goods %}-->
+    {% for good in goods %}
            <td class="goods" style="border:10px solid rgb(228,223,215);">
                <img src="../static/image/清明上河图.png" style="height: 70%"/>
-              <span>{{ goods['title'] }}</span>
-              <span>{{ goods['price'] }}</span>
+              <a href="#" style="color: #333333;">商品名称：{{ good['title'] }}</a><br>
+              <a href="#" style="color: #333333;">价 格：{{ good['price'] }}</a>
             </td>
-    <td class="goods" style="border:10px solid rgb(228,223,215);">
-        <img src="../static/image/清明上河图.png" style="height: 70%"/>
-              <span>{{ goods['title'] }}</span>
-              <span>{{ goods['price'] }}</span>
-            </td>
-     <td class="goods" style="border:10px solid rgb(228,223,215);">
-         <img src="../static/image/清明上河图.png" style="height: 70%"/>
-              <span>{{ goods['title'] }}</span>
-              <span>{{ goods['price'] }}</span>
-            </td>
-     <td class="goods" style="border:10px solid rgb(228,223,215);">
-         <img src="../static/image/清明上河图.png" style="height: 70%"/>
-              <span>{{ goods['title'] }}</span>
-              <span>{{ goods['price'] }}</span>
-            </td>
-     <td class="goods" style="border:10px solid rgb(228,223,215);">
-         <img src="../static/image/清明上河图.png" style="height: 70%"/>
-              <span>{{ goods['title'] }}</span>
-              <span>{{ goods['price'] }}</span>
-            </td>
-<!--        {% endfor %}-->
+        {% endfor %}
     </tbody>
 </table>
-
 </div>
 </body>
 </html>
