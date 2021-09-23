@@ -8,12 +8,12 @@
 <body>
 <script type="text/javascript" src="../static/js/login.js"></script>
     <div class="top"></div>
-    <div class="one">
-        <div class="two">
+    <div class="middle">
+        <div class="middleLeft">
             <img src="../static/image/清明上河图.png"/>
         </div>
-        <div class="three">
-            <form name="form1" method="post" style="position: fixed;top:40%;left: 66%;width:800px;height:200px;line-height:55px">
+        <div class="middleRight">
+            <form name="form1" method="post" class="form1">
                 <table border="0">
                     <tr>
 					<td><label for="username">用户名：</label></td>
@@ -24,14 +24,13 @@
 					<td><input type="password" name="password" id="password" value="" class="mytxt"  /></td>
 				</tr>
                 <tr>
-					<td><a href="#" style="color: #333333;text-decoration:none"> 忘记密码&nbsp;&nbsp;&nbsp; </a></td>
+					<td><a href="#"> 忘记密码&nbsp;&nbsp;&nbsp; </a></td>
 					<td style="float:right">
 						<input type="checkbox" name="username"  value="male"/>&nbsp;&nbsp;<label>记住账号&nbsp;&nbsp;&nbsp;&nbsp;</label>
 						<input type="checkbox" name="password"  value="female"/>&nbsp;&nbsp;<label>记住密码</label>
 					</td>
 				</tr>
                 </table>
-
                 <input type="submit" value="登 录" class="button" /> &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <input type="submit" value="注 册"  class="button" onclick="toRegister()"  /> &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <input type="submit" value="重 置" class="button" onclick="cancel()" />
