@@ -5,6 +5,156 @@
     <title>基础组件</title>
 </head>
 <body>
+<!--弹出框-->
+<div>
+    <link rel="stylesheet" type="text/css" href="../../css/Component/basicComponents.css">
+    <button type="button" class="button" onclick="dianwo()">添加品牌</button>
+    <div class="zhezhao" id='zhezhao'>
+			<div class="tankuang">
+                <div id="header">
+					<span id="headerspan">添加品牌</span>
+					<div id="header-right" onclick="hidder()">x</div>
+				</div>
+                <div style="height: 80%;">
+
+                </div>
+                <div id="footer">
+                    <button type="button" class="button" onclick="hidder()" style="float:right;font-weight:bold">取 消</button>
+                    <button type="button" class="button" onclick="hidder()" style="float:right;font-weight:bold">保 存</button>
+                </div>
+			</div>
+		</div>
+    </div>
+<script type="text/javascript">
+			document.getElementById('zhezhao').style.display="none";
+			function dianwo(){
+				document.getElementById('zhezhao').style.display="";
+			}
+			function hidder(){
+				document.getElementById('zhezhao').style.display="none";
+			}
+</script>
+<!--end弹出框-->
+
+<!-- 走马灯效果 -->
+<div id="marquee-box" >
+	<div id="marquee-con">
+		<div id="marquee-1"></div>
+		<div id="marquee" class="d-flex justify-content-between">
+			<img src="../../image/1.jpg" class="marquee-img"/>
+			<img src="../../image/1.jpg" class="marquee-img"/>
+			<img src="../../image/1.jpg" class="marquee-img"/>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+window.onload = function () {
+  var marqueeBox = document.getElementById("marquee-box");
+  var marquee = document.getElementById("marquee");
+  var marqueeCopy = document.getElementById("marquee-1");
+
+  marqueeCopy.innerHTML = marquee.innerHTML;
+  function fun() {
+   //从右向左
+    if (marqueeBox.scrollLeft >= 800) {
+      marqueeBox.scrollLeft = 0;
+    } else {
+      marqueeBox.scrollLeft++;
+    }
+    //从左向右
+    // if (marqueeBox.scrollLeft >= 0) {
+    //   marqueeBox.scrollLeft = 800;
+    // } else {
+    //   marqueeBox.scrollLeft -- ;
+    // }
+  }
+  var fun1 = setInterval(fun, 50);
+  marqueeBox.onmouseover = function () {
+    //鼠标经过时  清除定时器  停止图片的滚动
+    clearInterval(fun1);
+  };
+  marqueeBox.onmouseout = function () {
+    //鼠标离开后  继续滚动图片
+    fun1 = setInterval(fun, 50);
+  };
+};
+</script>
+<!-- end 走马灯效果 -->
+
+
+<!--轮播-->
+<div id="slideShowContainer">
+    <ul id="picUl">
+        <li><a href="#"><img src="../../image/1.jpg" alt=""/></a></li>
+        <li><a href="#"><img src="../../image/2.jpg" alt=""/></a></li>
+    </ul>
+    <ul id="dotUl">
+        <li class="selected">1</li>
+        <li class="unselected">2</li>
+    </ul>
+    <div id="titleDiv">
+        <span class="show"><a href="#">新闻1</a></span>
+        <span class="hide"><a href="#">新闻2</a></span>
+    </div>
+</div>
+<script>
+    /*图片轮播*/
+var slideShowContainer = document.getElementById("slideShowContainer");
+var pic = document.getElementById("picUl").getElementsByTagName("li");
+var dot = document.getElementById("dotUl").getElementsByTagName("li");
+var title = document.getElementById("titleDiv").getElementsByTagName("span");
+var index = 0;
+var timer = null;
+/*定义图片切换函数*/
+function changePic (curIndex) {
+    for(var i = 0;i < pic.length;++i){
+        pic[i].style.display = "none";
+        dot[i].className = "unselected";
+        title[i].className = "hide"
+    }
+    pic[curIndex].style.display = "block";
+    dot[curIndex].className = "selected";
+    title[curIndex].className = "show";
+}
+/*index超出图片总量时归零*/
+function autoPlay(){
+    if(+index >= pic.length){
+        index = 0;
+    }
+    changePic(index);
+    index++;
+}
+/*定义并调用自动播放函数*/
+timer = setInterval(autoPlay,1500);
+/*鼠标划过整个容器时停止自动播放*/
+slideShowContainer.onmouseover = function(){
+    clearInterval(timer);
+}
+/*鼠标离开整个容器时继续播放下一张*/
+slideShowContainer.onmouseout = function(){
+    timer = setInterval(autoPlay,1500);
+}
+/*遍历所有数字导航实现划过切换至对应的图片*/
+for(var i = 0;i < dot.length;i++){
+    dot[i].onmouseover = function(){
+        clearInterval(timer);
+        index = this.innerText-1;
+        changePic(index)
+    }
+}
+</script>
+<!--end轮播-->
+
+
+
+
+
+
+
+
+
+
+
 
 </body>
 </html>
