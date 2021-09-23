@@ -2,7 +2,7 @@
 from flask import  render_template, request, redirect, url_for, flash
 # from flask_login import login_required
 
-from myapp.forms.register import RegisterForm
+from myapp.forms.register import RegisterForm, LoginForm
 from myapp.models.base import db
 from myapp.models.user import User
 
@@ -16,32 +16,32 @@ def index():
 
 @webBP.route('/register', methods=['GET','POST'])
 def register():
-    form=request.form
-    if request.method == 'POST':
+    registerForm=RegisterForm(request.form)
+    if request.method == 'POST' and registerForm.validate():
         user = User()
-        user.username=form['username']
-        user.password = form['password']
-        if form['gender']=='1':
+        user.username=registerForm['username']
+        user.password = registerForm['password']
+        if registerForm['gender']=='1':
             user.gender=1
         else:
             user.gender=0
-        user.phone_num=form['phone_num']
-        user.birthday=form['birthday']
+        user.phone_num=registerForm['phone_num']
+        user.birthday=registerForm['birthday']
         db.session.add(user)
         db.session.commit()
         flash('注册成功，跳转至首页！')
-        return redirect(url_for('webBP.indexLogin',uname=form['username']))
-    return render_template('register.html',form=form)
+        return redirect(url_for('webBP.indexLogin',uname=registerForm['username']))
+    return render_template('register.html',form=registerForm)
 
 @webBP.route('/login', methods=['GET','POST'])
 def login():
-    form = request.form
-    if request.method == 'POST':
+    loginForm = LoginForm(request.form)
+    if request.method == 'POST' and loginForm.validate():
         user=User()
-        users = user.query.filter_by(username=form['username']).first()
+        users = user.query.filter_by(username=loginForm['username']).first()
         if users:
             flash('登录成功！')
-            return redirect(url_for('webBP.indexLogin',uname=form['username']))
+            return redirect(url_for('webBP.indexLogin',uname=loginForm['username']))
         else:
             flash('用户没有注册，请先注册')
     return render_template('login.html')
@@ -59,9 +59,5 @@ def indexLogin():
         return render_template('indexLogined1.html',username=uname,goods=goods,goodssku=goodssku)
     return '跳转首页失败'
 
-@webBP.route('/Merchant', methods=['GET','POST'])
-def test():
-    if request.method=='GET':
-        return render_template('Merchant.html')
-    return '跳转首页失败'
+
 

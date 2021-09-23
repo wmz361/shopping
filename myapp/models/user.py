@@ -1,6 +1,7 @@
 from sqlalchemy import Column, Integer, String, SmallInteger, UnicodeText, LargeBinary,Date
-from werkzeug.security import generate_password_hash
+from werkzeug.security import generate_password_hash, check_password_hash
 
+from myapp.libs.error_code import NotFound, AuthFailed
 from myapp.models.base import  Base
 
 
@@ -24,6 +25,21 @@ class User(Base):
     @password.setter
     def password(self,raw):
         self._password=generate_password_hash(raw)
+
+    @staticmethod
+    def verify(username,password):
+        user=User.query.filter_by(username=username).first()
+        if not user:
+            raise NotFound('user not fpund')
+        if not user.check_password(password):
+            raise AuthFailed()
+        return {'uid':user.userid}
+
+    def check_password(self,raw):
+        if not self._password:
+            return False
+        return check_password_hash(self._password,raw)
+
 
 
 
