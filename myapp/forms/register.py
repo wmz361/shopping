@@ -15,7 +15,7 @@ class LoginForm(Form):
                                                  EqualTo('password2', message='两次输入的密码不相同')])
 
     def validate_username(self, field):
-        """ 校验名称是否重复 """
+        """ 校验名称是否存在 """
         if not User.query.filter_by(username=field.data).first():
             raise ValidationError('用户名未注册')
 

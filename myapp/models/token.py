@@ -1,19 +1,11 @@
-"""
- Created by 七月 on 2018/5/13.
-"""
+
 from flask import current_app, jsonify
 
-from app.libs.enums import ClientTypeEnum
-from app.libs.error_code import AuthFailed
-from app.libs.redprint import Redprint
-from app.models.user import User
-from app.validators.forms import ClientForm, TokenForm
+
 from itsdangerous import TimedJSONWebSignatureSerializer as Serializer, SignatureExpired, \
     BadSignature
 
 api = Redprint('token')
-
-__author__ = '七月'
 
 
 @api.route('', methods=['POST'])

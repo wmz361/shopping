@@ -1,12 +1,10 @@
 # coding=utf-8
 from flask import Blueprint, render_template, request, url_for
 from werkzeug.utils import redirect
-
 from myapp import db
 from myapp.models.brand import Brand
 from myapp.models.goodssku import GoodsSku
 from myapp.models.goodsspu import GoodsSpu
-
 MerchantBP=Blueprint('MerchantBP',__name__)
 @MerchantBP.route('/Merchant',methods=['GET'])
 def Merchant():
