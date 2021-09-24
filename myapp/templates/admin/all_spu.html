@@ -1,0 +1,70 @@
+{% extends "../../Merchant.html" %}
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" type="text/css" href="../../static/css/Merchant.css">
+{% endblock %}
+<body>
+{% block top %}
+    {{ super() }}
+{% endblock %}
+{% block left %}
+<div class="left">
+    <table>
+    <tbody>
+    {% for goodSpu in goodSpus %}
+           <td class="userCenter" align="center">
+              <a href="#" style="color: #333333;">{{ goodSpu }}</a>
+            </td>
+
+        {% endfor %}
+    <td>
+        <button type="button" class="button" onclick="dianwo()">添加spu</button>
+        <div class="zhezhao" id='zhezhao'>
+			<div class="tankuang">
+                <form name="form1" method="post" class="form1" enctype="multipart/form-data">
+                <table border="0">
+                    <tr>
+					<td><label for="spuname" >spu名称：</label></td>
+					<td><input type="text" name="spuname" id="spuname" value="" class="mytxt" style="color: black" /></td>
+				</tr>
+				<tr>
+					<td><label for="spudescribe"> spu描述：</label></td>
+					<td><input type="text" name="spudescribe" id="spudescribe" value="" class="mytxt" style="color: black"/></td>
+				</tr>
+                <tr>
+					<td><label for="stock"> 库 存：</label></td>
+					<td><input type="number" name="stock" id="stock" value="" class="mytxt" style="color: black"/></td>
+				</tr>
+                <tr>
+					<td><label for="price"> 价 格：</label></td>
+                    <td><textarea name="number" id="price" class="price" style="height:40px;color: black"></textarea></td>
+				</tr>
+                <tr>
+					<td><label for="spupicture"> 图 片：</label></td>
+					<td><input type="file" name="spupicture" id="spupicture" value="" class="mytxt" style="color: black" /></td>
+				</tr>
+                </table>
+                    <br>
+                <input type="submit" value="重 置"  class="button" onclick="toRegister()" style="float:right;color: black" /> &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="submit" value="新 建" class="button" style="float:right;color: black"/> &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </form>
+				<div id="header">
+					<span style="color:black;line-height: 70px;padding-left:40px;font-weight:bold">添加spu</span>
+					<div id="header-right" onclick="hidder()" style="color: black;line-height: 70px;padding-right:1%;font-weight:bold;cursor:hand">x</div>
+				</div>
+			</div>
+		</div>
+    </td>
+    </tbody>
+     </table>
+</div>
+{% endblock %}
+{% block right %}
+<div class="right">
+    </div>
+{% endblock %}
+{% block scripts %}
+    {{ super() }}
+{% endblock %}
+
+</body>

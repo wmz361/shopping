@@ -1,0 +1,59 @@
+{% extends "../../Merchant.html" %}
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" type="text/css" href="../../static/css/Merchant.css">
+{% endblock %}
+<body>
+{% block top %}
+    {{ super() }}
+{% endblock %}
+{% block left %}
+<div class="left">
+    <table>
+    <tbody>
+    {% for goodSku in goodSkus %}
+           <td class="userCenter" align="center">
+              <a href="#" style="color: #333333;">{{ goodSku }}</a>
+            </td>
+
+        {% endfor %}
+    <td>
+        <button type="button" class="button" onclick="dianwo()">添加品牌</button>
+        <div class="zhezhao" id='zhezhao'>
+			<div class="tankuang">
+                <form name="form1" method="post" class="form1" enctype="multipart/form-data">
+                <table border="0">
+                    <tr>
+					<td><label for="skuname" >sku名称：</label></td>
+					<td><input type="text" name="skuname" id="skuname" value="" class="mytxt" style="color: black" /></td>
+				</tr>
+				<tr>
+					<td><label for="skufatherid"> sku关联品牌：</label></td>
+					<td><input type="text" name="skufatherid" id="skufatherid" value="" class="mytxt" style="color: black"/></td>
+				</tr>
+
+                </table>
+                    <br>
+                <input type="submit" value="重 置"  class="button" onclick="toRegister()" style="float:right;color: black" /> &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="submit" value="新 建" class="button" style="float:right;color: black"/> &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </form>
+				<div id="header">
+					<span style="color:black;line-height: 70px;padding-left:40px;font-weight:bold">添加sku</span>
+					<div id="header-right" onclick="hidder()" style="color: black;line-height: 70px;padding-right:1%;font-weight:bold;cursor:hand">x</div>
+				</div>
+			</div>
+		</div>
+    </td>
+    </tbody>
+     </table>
+</div>
+{% endblock %}
+{% block right %}
+<div class="right">
+    </div>
+{% endblock %}
+{% block scripts %}
+    {{ super() }}
+{% endblock %}
+
+</body>

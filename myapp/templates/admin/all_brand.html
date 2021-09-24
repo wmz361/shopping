@@ -1,46 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "../../Merchant.html" %}
 {% block head %}
-<head>
-    <meta charset="UTF-8">
-    <title>商家后台</title>
-    <link rel="stylesheet" type="text/css" href="../static/css/Merchant.css">
-</head>
+    {{ super() }}
+    <link rel="stylesheet" type="text/css" href="../../static/css/Merchant.css">
 {% endblock %}
 <body>
 {% block top %}
-<div class="top1" >
-    <span class="text1" align="center" style="float:right" >欢迎您！吴大喜 </span>
-    <a class="text1" align="center" style="float:left" href="" > 品牌管理 </a>
-    <a class="text1" align="center" style="float:left" href="" > 商品管理 </a>
-    <a class="text1" align="center" style="float:left" href="" > 订单管理 </a>
-    <a class="text1" align="center" style="float:left" href="" > 品牌数据分析 </a>
-    <a class="text1" align="center" style="float:left" href=""> 产品数据分析 </a>
-    <div class="box" style="float:right">
-      <input class="input" type="text" name="" placeholder="请输入商品内容">
-    <a class="search" href="indexLogined1.html" >
-        <i class="search">搜 索</i>
-    </a>
- </div>
-</div>
+    {{ super() }}
 {% endblock %}
 {% block left %}
 <div class="left">
     <table>
     <tbody>
-    {% for goodsku in title %}
+    {% for brand in brands %}
            <td class="userCenter" align="center">
-              <a href="#" style="color: #333333;">{{ goodsku }}</a>
+              <a href="#" style="color: #333333;">{{ brand['brandname'] }}</a>
             </td>
+
         {% endfor %}
-    </tbody>
-     </table>
-</div>
-{% endblock %}
-{% block right %}
-<div class="right">
-    <button type="button" class="button" onclick="dianwo()">添加品牌</button>
-    <div class="zhezhao" id='zhezhao'>
+    <td>
+        <button type="button" class="button" onclick="dianwo()">添加品牌</button>
+        <div class="zhezhao" id='zhezhao'>
 			<div class="tankuang">
                 <form name="form1" method="post" class="form1" enctype="multipart/form-data">
                 <table border="0">
@@ -62,11 +41,11 @@
 				</tr>
                 <tr>
 					<td><label for="brandurl"> 品牌主页url：</label></td>
-					<td><input type="text" name="brandurl" id="brandurl" value="" class="mytxt" style="color: black" /></td>
+					<td><input type="url" name="brandurl" id="brandurl" value="" class="mytxt" style="color: black" /></td>
 				</tr>
                 <tr>
 					<td><label for="phone_num"> 品牌联系方式：</label></td>
-					<td><input type="text" name="phone_num" id="phone_num" value="" class="mytxt" style="color: black"/></td>
+					<td><input type="tel" name="phone_num" id="phone_num" value="" class="mytxt" style="color: black"/></td>
 				</tr>
                 </table>
                     <br>
@@ -79,18 +58,17 @@
 				</div>
 			</div>
 		</div>
+    </td>
+    </tbody>
+     </table>
+</div>
+{% endblock %}
+{% block right %}
+<div class="right">
     </div>
 {% endblock %}
 {% block scripts %}
-<script type="text/javascript">
-			document.getElementById('zhezhao').style.display="none";
-			function dianwo(){
-				document.getElementById('zhezhao').style.display="";
-			}
-			function hidder(){
-				document.getElementById('zhezhao').style.display="none";
-			}
-</script>
+    {{ super() }}
 {% endblock %}
+
 </body>
-</html>

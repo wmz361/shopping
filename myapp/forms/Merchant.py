@@ -5,6 +5,7 @@ from myapp.models.goodssku import GoodsSku
 from myapp.models.goodsspu import GoodsSpu
 from .base import DataRequired
 
+
 class NewBrandForm(Form):
     brandname = StringField(
         label='品牌名称：',  # 标签
