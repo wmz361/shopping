@@ -28,9 +28,9 @@
 <div class="left">
      <table>
     <tbody>
-    {% for goodsku in goodssku %}
+    {% for brand in brands %}
            <td class="goodssku" align="center">
-              <a href="#" style="color: #333333;">{{ goodsku }}</a>
+              <a href="#" style="color: #333333;">{{ brand['brandname'] }}</a>
             </td>
         {% endfor %}
     </tbody>

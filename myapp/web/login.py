@@ -3,7 +3,10 @@ from flask import  render_template, request, redirect, url_for, flash
 from flask_login import login_user, login_required
 from myapp.forms.register import RegisterForm, LoginForm, PhoneNumForm, EmailForm, ResetPasswordForm
 from myapp.models.base import db
+from myapp.models.goodssku import GoodsSku
 from myapp.models.user import User
+from myapp.view_models.brand import BrandViewModel
+from myapp.view_models.sku import SkuViewModel
 from myapp.web import web
 
 
@@ -45,13 +48,11 @@ def login():
 def indexLogin():
     uname=request.args.get('uname')
     if request.method=='GET':
-        good1={'title':'商品1',"price":25}
-        good2 = {'title': '商品2', "price": 30}
-        goods=[]
-        goods.append(good1)
-        goods.append(good2)
-        goodssku=['种类1','种类2','种类3','种类4']
-        return render_template('indexLogined1.html',username=uname,goods=goods,goodssku=goodssku)
+        brands = GoodsSku.query.filter_by().all()
+        brandsDic = BrandViewModel.brand_collection(brands)
+        sku=GoodsSku.query.filter_by().all()
+        goodsku=SkuViewModel.sku_collection(sku)
+        return render_template('indexLogined1.html',username=uname,brands=brandsDic,goodssku=goodsku)
     return '跳转首页失败'
 
 @web.route('/reset/password', methods=['GET','POST'])

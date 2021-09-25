@@ -29,6 +29,11 @@ def add_brand():
     brands=Brand.query.all()
     return render_template('admin/all_brand.html',brands=brands)
 
+@web.route('/search_brand', methods=['GET', 'POST'])
+@login_required
+def search_brand():
+    pass
+
 @web.route('/add_sku', methods=['GET', 'POST'])
 @login_required
 def add_sku():
@@ -56,6 +61,8 @@ def add_spu():
         return redirect(url_for('MerchantBP.all_spu'))
     spu=GoodsSpu.query.all()
     return render_template('admin/all_spu.html',goodSpus=spu)
+
+
 
 
 
