@@ -14,3 +14,4 @@ class GoodsSpu(Base):
     stock=Column(Integer)  # 库存
     price=Column(Float)
     spupicture=Column(LargeBinary)  # 图片
+    uid = Column(Integer)

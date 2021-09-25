@@ -11,3 +11,4 @@ class GoodsSku(Base):
     skuname = Column(String(24), nullable=False)
     skufatherid = Column(Integer, primary_key=True)
     brandid = Column(Integer, primary_key=True)
+    uid = Column(Integer)

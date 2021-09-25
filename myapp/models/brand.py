@@ -14,5 +14,6 @@ class Brand(Base):
     brandstory=Column(UnicodeText)  # 品牌故事
     brandurl= Column(String(256))  # 品牌主页url
     phone_num = Column(String(18))
+    uid = Column(Integer)
 
 

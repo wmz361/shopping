@@ -8,8 +8,10 @@ __all__ = ['db', 'Base']
 
 
 class SQLAlchemy(_SQLAlchemy):
+
     @contextmanager
     def auto_commit(self, throw=True):
+        """ 定义一个上下文管理器，实现数据库回滚 """
         try:
             yield
             self.session.commit()
@@ -19,9 +21,9 @@ class SQLAlchemy(_SQLAlchemy):
             if throw:
                 raise e
 
-
 class Query(BaseQuery):
     def filter_by(self, **kwargs):
+        ''' 重写filter_by，查询条件中默认添加status=1 '''
         if 'status' not in kwargs.keys():
             kwargs['status'] = 1
         return super(Query, self).filter_by(**kwargs)
