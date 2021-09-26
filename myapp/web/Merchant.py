@@ -27,7 +27,7 @@ def add_brand():
             db.session.add(brand)
         return redirect(url_for('MerchantBP.all_brand'))
     brands=Brand.query.all()
-    return render_template('admin/all_brand.html',brands=brands)
+    return render_template('admin/search_brand',brands=brands)
 
 @web.route('/search_brand', methods=['GET', 'POST'])
 @login_required

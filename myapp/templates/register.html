@@ -5,25 +5,23 @@
     <link rel="stylesheet" type="text/css" href="../static/css/register.css">
     <title>注册</title>
 </head>
-<body hight=100%>
+<body >
 <script type="text/javascript" src="../static/js/login.js"></script>
     <div class="top"></div>
-    <div class="one">
-        <div class="two">
+    <div class="middle">
+        <div class="middleLeft">
             <img src="../static/image/清明上河图.png"/>
         </div>
-
-        <div class="three">
-
-            <form name="form1" method="post" style="position: fixed;top:30%;left: 66%;width:800px;height:200px;line-height:55px">
-                <table border="0">
-                    <tr>
+        <div class="middleRight">
+            <form name="form1" method="post" class="form1">
+                <table border="0" >
+                <tr>
 					<td><label for="username">用户名：</label></td>
 					<td><input type="text" name="username" id="username" value="" class="mytxt" /></td>
 				</tr>
 				<tr>
 					<td><label for="password">密 码：</label></td>
-					<td><input type="password" name="password" pattern="{6,}" id="password" value="" class="mytxt"  />（至少包含6个字符）</td>
+					<td><input type="password" name="password" id="password" value="" class="mytxt"/>（至少包含6个字符）</td>
 				</tr>
 				<tr>
 					<td><label for="password2">再次输入密码：</label></td>
@@ -37,8 +35,8 @@
 				<tr>
 					<td><label>性别：</label></td>
 					<td>
-						<input type="radio" name="gender" value="0"/>&nbsp;&nbsp;<label>男</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-						<input type="radio" name="gender" value="1"/>&nbsp;&nbsp;<label>女</label>
+						<input type="radio" name="gender" value="0"/>&nbsp;&nbsp;男
+						<input type="radio" name="gender" value="1"/>&nbsp;&nbsp;女
 					</td>
 				</tr>
                 <tr>
@@ -47,9 +45,11 @@
                     <input type="date" size="1" name="birthday" placeholder="yyyy" value=""  class="mytxt" />
                 </td>
 				</tr>
+
                 </table>
-                <input type="submit" name="submit" value="提 交" class="button" /> &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;
-                <input type="submit" name="cancel" value="重 置" class="button" onclick="cancel()" />
+                <br>
+                    <input type="submit" name="submit" value="提 交" class="button"/> &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="reset" name="reset" value="重 置" class="button"/>
             </form>
         </div>
      </div>
