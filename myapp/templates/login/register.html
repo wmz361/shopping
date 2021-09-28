@@ -1,17 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="../static/css/register.css">
-    <title>注册</title>
-</head>
-<body >
-<script type="text/javascript" src="../static/js/login.js"></script>
-    <div class="top"></div>
-    <div class="middle">
-        <div class="middleLeft">
-            <img src="../static/image/清明上河图.png"/>
-        </div>
+{% extends "base.html" %}
+{% block title %}
+<title>注册</title>
+{% endblock %}
+{% block form %}
         <div class="middleRight">
             <form name="form1" method="post" class="form1">
                 <table border="0" >
@@ -29,7 +20,11 @@
 				</tr>
 				<tr>
 					<td><label for="phone_num">手机号：</label></td>
-					<td><input type="text" name="phone_num"  id="phone_num" value=""  class="mytxt" /></td>
+					<td><input type="tel" name="phone_num"  id="phone_num" value=""  class="mytxt" /></td>
+				</tr>
+                <tr>
+					<td><label for="email">邮箱：</label></td>
+					<td><input type="email" name="phone_num"  id="email" value=""  class="mytxt" /></td>
 				</tr>
 
 				<tr>
@@ -52,7 +47,4 @@
                     <input type="reset" name="reset" value="重 置" class="button"/>
             </form>
         </div>
-     </div>
-    <div class="end"></div>
-</body>
-</html>
+     {% endblock %}

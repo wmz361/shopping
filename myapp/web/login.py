@@ -3,16 +3,9 @@ from flask import  render_template, request, redirect, url_for, flash
 from flask_login import login_user, login_required
 from myapp.forms.register import RegisterForm, LoginForm, PhoneNumForm, EmailForm, ResetPasswordForm
 from myapp.models.base import db
-from myapp.models.goodssku import GoodsSku
 from myapp.models.user import User
-from myapp.view_models.brand import BrandViewModel
-from myapp.view_models.sku import SkuViewModel
 from myapp.web import web
 
-
-@web.route('/',methods=['GET'])
-def index():
-    return render_template('indexUnLogined.html')
 
 @web.route('/register', methods=['GET','POST'])
 def register():
@@ -43,18 +36,6 @@ def login():
             flash('账号不存在或者密码错误！')
     return render_template('login.html')
 
-@web.route('/indexLogin/?', methods=['GET','POST'])
-@login_required
-def indexLogin():
-    uname=request.args.get('uname')
-    if request.method=='GET':
-        brands = GoodsSku.query.filter_by().all()
-        brandsDic = BrandViewModel.brand_collection(brands)
-        sku=GoodsSku.query.filter_by().all()
-        goodsku=SkuViewModel.sku_collection(sku)
-        return render_template('indexLogined1.html',username=uname,brands=brandsDic,goodssku=goodsku)
-    return '跳转首页失败'
-
 @web.route('/reset/password', methods=['GET','POST'])
 def forget_password_request():
     if  'phone_num' in request.form.keys():
@@ -72,7 +53,7 @@ def forget_password_request():
             send_email(form.email.data,'重置你的密码','email/reset_password_request.html',user=user,token=user.generate_token())
             flash('验证邮件已发送至您的邮箱，请注意查收！')
             return redirect(url_for('web.login'))
-    return render_template('reset_password_request.html',form=form)
+    return render_template('email/reset_password_request.html',form=form)
 
 @web.route('/reset/password/<token>', methods=['GET','POST'])
 def reset_password(token):

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="../static/css/index.css">
+    <link rel="stylesheet" type="text/css" href="../../static/css/index.css">
     <title>首页</title>
 </head>
 <body >
@@ -11,12 +11,12 @@
         <button class="button" align="center" style="float:right">更 多</button>
         <div class="dropdown-content">
             <a href="{{ url_for('MerchantBP.Merchant')}}">后 台</a>
-            <a href="userCenter.html">用户中心</a>
-            <a href="login.html">退出登录</a>
+            <a href="../userCenter/userCenter.html">用户中心</a>
+            <a href="../login/login.html">退出登录</a>
         </div>
     </div>
     <span class="text" align="center" style="float:right" >欢迎您！{{username}} </span>
-    <a class="button" align="center" style="float:right" href="shoppingCart.html"> 购物车</a>
+    <a class="button" align="center" style="float:right" href="../userCenter/shoppingCart.html"> 购物车</a>
     <div class="box" style="float:right">
       <input class="input" type="text" name="" placeholder="请输入商品内容">
     <a class="search" href="#" >
@@ -44,7 +44,7 @@
     <tbody>
     {% for good in goods %}
            <td class="goods" style="border:10px solid rgb(228,223,215);">
-               <img src="../static/image/清明上河图.png" style="height: 70%"/>
+               <img src="../../static/image/清明上河图.png" style="height: 70%"/>
               <a href="#" style="color: #333333;">商品名称：{{ good['title'] }}</a><br>
               <a href="#" style="color: #333333;">价 格：{{ good['price'] }}</a>
             </td>

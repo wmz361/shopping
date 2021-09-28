@@ -10,7 +10,7 @@ from myapp.models.base import Base, db
 
 class User(UserMixin,Base):
 
-    __tablename__ = 'user'
+    __tablename__ = 'userCenter'
     id = Column(Integer, primary_key=True)
     username = Column(String(24), nullable=False)
     phone_num = Column(String(18))
@@ -33,7 +33,7 @@ class User(UserMixin,Base):
     def verify(username,password):
         user=User.query.filter_by(username=username).first()
         if not user:
-            raise NotFound('user not fpund')
+            raise NotFound('userCenter not fpund')
         if not user.check_password(password):
             raise AuthFailed()
         return {'uid':user.userid}

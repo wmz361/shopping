@@ -32,6 +32,7 @@ class RegisterForm(LoginForm,ResetPasswordForm):
 
     def validate_username(self,field):
         """ 校验名称是否重复 """
+
         if User.query.filter_by(username=field.data).first():
             raise ValidationError('用户名已存在')
 
