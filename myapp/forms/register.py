@@ -15,18 +15,12 @@ class ResetPasswordForm(Form):
                                                  EqualTo('password2', message='两次输入的密码不相同')])
     password2=PasswordField(validators=[DataRequired(),Length(6,100)])
 
-class LoginForm(PhoneNumForm,EmailForm):
-    username = StringField(
-        label='用户名：',  # 标签
-        validators=[  # 验证方式
-            DataRequired()  # 不能为空
-        ]
-    )
-
-    def validate_username(self, field):
-        """ 校验名称是否存在 """
-        if not User.query.filter_by(username=field.data).first():
-            raise ValidationError('用户名未注册')
+class LoginForm(Form):
+    username = StringField(validators=[DataRequired()])
+    # def validate_username(self, field):
+    #     """ 校验名称是否存在 """
+    #     if not User.query.filter_by(username=field.data).first():
+    #         raise ValidationError('用户名未注册')
 
 class RegisterForm(LoginForm,ResetPasswordForm):
 

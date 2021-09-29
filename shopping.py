@@ -4,5 +4,5 @@ from myapp.logs import create_logger
 app=create_app()
 
 if __name__=="__main__":
-    create_logger()
+    # create_logger()
     app.run(debug=True)

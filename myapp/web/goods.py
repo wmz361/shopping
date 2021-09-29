@@ -1,12 +1,11 @@
-from flask import render_template
-from myapp import web
+from flask import render_template, Blueprint
 from myapp.models.comment import Comment
 from myapp.models.goodsspu import GoodsSpu
 from myapp.view_models.comment import CommentViewModel
 from myapp.view_models.spu import SpuViewModel
 
-
-@web.route('/goodDetail/<spuid>',methods=['GET'])
+goodsBP = Blueprint("goodsBP",__name__)
+@goodsBP.route('/goodDetail/<spuid>',methods=['GET'])
 def index(spuid):
     spu = GoodsSpu.query.filter(GoodsSpu.spuid == spuid).all()
     goodspuDic = SpuViewModel.spu_collection(spu)

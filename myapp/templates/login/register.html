@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "login/base.html" %}
 {% block title %}
 <title>注册</title>
 {% endblock %}
@@ -47,4 +47,12 @@
                     <input type="reset" name="reset" value="重 置" class="button"/>
             </form>
         </div>
+<div class="warning">
+        {% for message in get_flashed_messages() %}
+            <div class="alert alert-warning alert-dismissible" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <strong>Warning!</strong> {{ message }}
+</div>
+        {% endfor %}
+    </div>
      {% endblock %}

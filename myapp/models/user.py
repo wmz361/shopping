@@ -3,7 +3,7 @@ from flask_login import UserMixin
 from sqlalchemy import Column, Integer, String, SmallInteger, UnicodeText, LargeBinary,Date
 from werkzeug.security import generate_password_hash, check_password_hash
 from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
-from myapp import login_manager
+# from myapp import login_manager
 from myapp.libs.error_code import NotFound, AuthFailed
 from myapp.models.base import Base, db
 
@@ -61,9 +61,9 @@ class User(UserMixin,Base):
             user.password=new_password
         return True
 
-@login_manager.user_loader
-def get_user(uid):
-    return User.query.get(int(uid))
+# @login_manager.user_loader
+# def get_user(uid):
+#     return User.query.get(int(uid))
 
 
 

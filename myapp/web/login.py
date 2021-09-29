@@ -1,42 +1,45 @@
 # coding=utf-8
-from flask import  render_template, request, redirect, url_for, flash
+from flask import render_template, request, redirect, url_for, flash, Blueprint
 from flask_login import login_user, login_required
 from myapp.forms.register import RegisterForm, LoginForm, PhoneNumForm, EmailForm, ResetPasswordForm
 from myapp.models.base import db
 from myapp.models.user import User
-from myapp.web import web
 
-
-@web.route('/register', methods=['GET','POST'])
+loginBP = Blueprint("loginBP",__name__)
+@loginBP.route('/register', methods=['GET','POST'])
 def register():
-    registerForm=RegisterForm(request.form)
-    if request.method == 'POST' and registerForm.validate():
-        with db.auto_commit():
-            user = User()
-            user.set_attrs(registerForm.data)
-            db.session.add(user)
-        flash('注册成功，跳转至首页！')
-        return redirect(url_for('webBP.indexLogin',uname=registerForm['username']))
-    return render_template('register.html',form=registerForm)
-
-@web.route('/login', methods=['GET','POST'])
-def login():
-    loginForm = LoginForm(request.form)
-    if request.method == 'POST' and loginForm.validate():
-        user = User.query.filter_by(username=loginForm['username']).first()
-        if user and user.check_password(loginForm.password.data):
-            # 可以写入用户信息
-            login_user(user,remember=True)
-            next=request.args.get('next')  # 获取到url中next参数的值
-            if not next or not next.startswith('/'):
-                next=url_for('webBP.indexLogin',uname=loginForm.username.data)
-            flash('登录成功！')
-            return redirect(next)
+    if request.method == 'POST' :
+        registerForm = RegisterForm(request.form)
+        if registerForm.validate():
+            with db.auto_commit():
+                user = User()
+                user.set_attrs(registerForm.data)
+                db.session.add(user)
+            flash('注册成功，跳转至首页！')
+            return redirect(url_for('loginBP.indexLogin',uname=registerForm['username']))
         else:
-            flash('账号不存在或者密码错误！')
-    return render_template('login.html')
+            flash('数据验证失败！')
+    return render_template('login/register.html')
 
-@web.route('/reset/password', methods=['GET','POST'])
+@loginBP.route('/login', methods=['GET','POST'])
+def login():
+    if request.method == 'POST':
+        loginForm = LoginForm(request.form)
+        if loginForm.validate():
+            user = User.query.filter(User.username==loginForm['username']).first()
+            if user and user.check_password(loginForm.password.data):
+                # 可以写入用户信息
+                login_user(user,remember=True)
+                next=request.args.get('next')  # 获取到url中next参数的值
+                if not next or not next.startswith('/'):
+                    next=url_for('webBP.indexLogin',uname=loginForm.username.data)
+                flash('登录成功！')
+                return redirect(next)
+            else:
+                flash('账号不存在或者密码错误！')
+    return render_template('login/login.html')
+
+@loginBP.route('/reset/password', methods=['GET','POST'])
 def forget_password_request():
     if  'phone_num' in request.form.keys():
         form = PhoneNumForm(request.form)
@@ -55,7 +58,7 @@ def forget_password_request():
             return redirect(url_for('web.login'))
     return render_template('email/reset_password_request.html',form=form)
 
-@web.route('/reset/password/<token>', methods=['GET','POST'])
+@loginBP.route('/reset/password/<token>', methods=['GET','POST'])
 def reset_password(token):
     form=ResetPasswordForm(request.form)
     if request.method=='POST' and form.validate():
@@ -65,7 +68,7 @@ def reset_password(token):
             return redirect(url_for('web.login'))
     return render_template('reset_password,html')
 
-@web.route('/change/password', methods=['GET', 'POST'])
+@loginBP.route('/change/password', methods=['GET', 'POST'])
 def change_password():
     pass
 

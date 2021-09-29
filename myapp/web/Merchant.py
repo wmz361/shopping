@@ -1,5 +1,5 @@
 # coding=utf-8
-from flask import render_template, request, url_for
+from flask import render_template, request, url_for, Blueprint
 from flask_login import login_required,current_user
 from werkzeug.utils import redirect
 from myapp import db
@@ -7,15 +7,15 @@ from myapp.forms.Merchant import NewBrandForm, NewSKUForm, NewSPUForm
 from myapp.models.brand import Brand
 from myapp.models.goodssku import GoodsSku
 from myapp.models.goodsspu import GoodsSpu
-from myapp.web import web
 
 
-@web.route('/Merchant',methods=['GET'])
+merchantBP = Blueprint("merchantBP",__name__)
+@merchantBP.route('/Merchant',methods=['GET'])
 @login_required
 def Merchant():
     return render_template('Merchant.html')
 
-@web.route('/add_brand', methods=['GET', 'POST'])
+@merchantBP.route('/add_brand', methods=['GET', 'POST'])
 @login_required
 def add_brand():
     brandForm=NewBrandForm(request.form)
@@ -29,12 +29,12 @@ def add_brand():
     brands=Brand.query.all()
     return render_template('admin/search_brand',brands=brands)
 
-@web.route('/search_brand', methods=['GET', 'POST'])
+@merchantBP.route('/search_brand', methods=['GET', 'POST'])
 @login_required
 def search_brand():
     pass
 
-@web.route('/add_sku', methods=['GET', 'POST'])
+@merchantBP.route('/add_sku', methods=['GET', 'POST'])
 @login_required
 def add_sku():
     skuForm=NewSKUForm(request.form)
@@ -48,7 +48,7 @@ def add_sku():
     sku=GoodsSku.query.all()
     return render_template('admin/all_sku.html',goodSkus=sku)
 
-@web.route('/add_spu', methods=['GET', 'POST'])
+@merchantBP.route('/add_spu', methods=['GET', 'POST'])
 @login_required
 def add_spu():
     spuForm=NewSPUForm(request.form)
