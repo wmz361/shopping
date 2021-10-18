@@ -32,10 +32,9 @@
          .middleRight {
             width: 40%;
             height: 100%;
-
-             position: absolute;
+            position: absolute;
             top: 30%;
-             left: 60%;
+            left: 60%;
         }
          img{
              position: absolute;

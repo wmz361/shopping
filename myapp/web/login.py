@@ -1,6 +1,6 @@
 # coding=utf-8
 from flask import render_template, request, redirect, url_for, flash, Blueprint
-from flask_login import login_user, login_required
+from flask_login import login_user
 from myapp.forms.register import RegisterForm, LoginForm, PhoneNumForm, EmailForm, ResetPasswordForm
 from myapp.models.base import db
 from myapp.models.user import User
@@ -16,7 +16,8 @@ def register():
                 user.set_attrs(registerForm.data)
                 db.session.add(user)
             flash('注册成功，跳转至首页！')
-            return redirect(url_for('loginBP.indexLogin',uname=registerForm['username']))
+            # return redirect(url_for('indexBP.index'))
+            return redirect(url_for('indexBP.indexLogin',uname=registerForm.data['username']))
         else:
             flash('数据验证失败！')
     return render_template('login/register.html')
