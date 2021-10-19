@@ -16,7 +16,6 @@ def register():
                 user.set_attrs(registerForm.data)
                 db.session.add(user)
             flash('注册成功，跳转至首页！')
-            # return redirect(url_for('indexBP.index'))
             return redirect(url_for('indexBP.indexLogin',uname=registerForm.data['username']))
         else:
             flash('数据验证失败！')
@@ -27,13 +26,13 @@ def login():
     if request.method == 'POST':
         loginForm = LoginForm(request.form)
         if loginForm.validate():
-            user = User.query.filter(User.username==loginForm['username']).first()
+            user = User.query.filter(User.username==loginForm.data['username']).first()
             if user and user.check_password(loginForm.password.data):
                 # 可以写入用户信息
                 login_user(user,remember=True)
                 next=request.args.get('next')  # 获取到url中next参数的值
                 if not next or not next.startswith('/'):
-                    next=url_for('webBP.indexLogin',uname=loginForm.username.data)
+                    next=url_for('loginBP.indexLogin',uname=loginForm.data['username'])
                 flash('登录成功！')
                 return redirect(next)
             else:
@@ -56,7 +55,7 @@ def forget_password_request():
             from myapp.libs.email import send_email
             send_email(form.email.data,'重置你的密码','email/reset_password_request.html',user=user,token=user.generate_token())
             flash('验证邮件已发送至您的邮箱，请注意查收！')
-            return redirect(url_for('web.login'))
+            return redirect(url_for('loginBP.login'))
     return render_template('email/reset_password_request.html',form=form)
 
 @loginBP.route('/reset/password/<token>', methods=['GET','POST'])
@@ -72,6 +71,10 @@ def reset_password(token):
 @loginBP.route('/change/password', methods=['GET', 'POST'])
 def change_password():
     pass
+
+@loginBP.route('/exitLogin', methods=['GET', 'POST'])
+def exitLogin():
+    return redirect(url_for('loginBP.login'))
 
 
 

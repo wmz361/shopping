@@ -23,7 +23,7 @@ def indexLogin():
     goodskuDic=[{"title":"商品001","price":"100元"}]
     return render_template('index/indexLogined1.html',username=uname,brands=brandsDic,goodssku=goodskuDic)
 
-@indexBP.route('/search/?', methods=['GET'])
+@indexBP.route('/search', methods=['GET'])
 def search(keywords):
     uname = request.args.get('uname')
     brands = Brand.query.filter(or_(Brand.brandname == keywords, Brand.brandid == keywords)).all()
