@@ -1,21 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+{% extends "base/logined.html" %}
+{% block title %}
     <title>用户中心</title>
     <link rel="stylesheet" type="text/css" href="../../static/css/userCenter.css">
-</head>
-<body>
-<div class="top1" >
-    <span class="text1" align="center" style="float:right" >欢迎您！吴大喜 </span>
-    <a class="button" align="center" style="float:right" href="../shoppingCart/shoppingCart.html"> 购物车</a>
-    <div class="box" style="float:right">
-      <input class="input" type="text" name="" placeholder="请输入商品内容">
-    <a class="search" href="../index/indexLogined1.html" >
-        <i class="search">搜 索</i>
-    </a>
- </div>
-</div>
+{% endblock %}
+{% block more %}
+<a href="{{ url_for('loginBP.Merchant')}}">后 台</a>
+<a href="{{ url_for('loginBP.Merchant')}}">首页</a>
+
+{% block  details %}
 <div class="left">
         <a class="userCenter" align="center" href=""> 用户中心 </a>
         <a class="userCenter" align="center" href=""> 地址管理 </a>
@@ -23,7 +15,4 @@
         <a class="userCenter" align="center" href=""> 我的收藏 </a>
 </div>
 <div class="right"></div>
-<div class="footer"></div>
-
-</body>
-</html>
+{% endblock %}

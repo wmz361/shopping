@@ -1,27 +1,35 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8" />
-		<title></title>
-	</head>
-	<body>
-		<button type="button" onclick="dianwo()">添加店铺</button>
-		<div class="zhezhao" id='zhezhao'>
-			<div class="tankuang">
-				<div id="header">
-					<span>我是弹窗</span>
-					<div id="header-right" onclick="hidder()">x</div>
-				</div>
-			</div>
-		</div>
-		<script type="text/javascript">
-			document.getElementById('zhezhao').style.display="none";
-			function dianwo(){
-				document.getElementById('zhezhao').style.display="";
-			}
-			function hidder(){
-				document.getElementById('zhezhao').style.display="none";
-			}
-		</script>
-	</body>
-</html>
+{% extends "base/logined.html" %}
+{% block title %}
+    <title>首页</title>
+    <link rel="stylesheet" type="text/css" href="../../static/css/index.css">
+{% endblock %}
+{% block  details %}
+<div class="top2"></div>
+<div class="left">
+     <table>
+    <tbody>
+    {% for brand in brands %}
+           <td class="goodssku" align="center">
+              <a href="#" style="color: #333333;">{{ brand['brandname'] }}</a>
+            </td>
+     {% endfor %}
+    </tbody>
+     </table>
+</div>
+<div class="right">
+    <a class="button" align="center" style="float:left"  href="#">推 荐</a>
+    <a class="button" align="center" style="float:left"  href="#">销 量</a>
+    <a class="button" align="center" style="float:left" href="#"> 最 新</a>
+    <table>
+    <tbody>
+    {% for good in goods %}
+           <td class="goods" style="border:10px solid rgb(228,223,215);">
+               <img src="../../static/image/清明上河图.png" style="height: 70%"/>
+              <a href="#" style="color: #333333;">商品名称：{{ good['title'] }}</a><br>
+              <a href="#" style="color: #333333;">价 格：{{ good['price'] }}</a>
+            </td>
+        {% endfor %}
+    </tbody>
+</table>
+</div>
+{% endblock %}

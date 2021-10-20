@@ -1,30 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-{% block head %}
-<head>
-    <meta charset="UTF-8">
+{% extends "base/logined.html" %}
+{% block title %}
     <title>商家后台</title>
     <link rel="stylesheet" type="text/css" href="../../static/css/Merchant.css">
-</head>
+    <script type="text/javascript" src="../../static/js/Merchant.js"></script>
 {% endblock %}
-<body>
-{% block top %}
-<div class="top1" >
-    <span class="text1" align="center" style="float:right" >欢迎您！{{username}} </span>
+    {% block top %}
     <a class="text1" align="center" style="float:left" href="" > 品牌管理 </a>
     <a class="text1" align="center" style="float:left" href="" > 商品管理 </a>
     <a class="text1" align="center" style="float:left" href="" > 订单管理 </a>
     <a class="text1" align="center" style="float:left" href="" > 品牌数据分析 </a>
     <a class="text1" align="center" style="float:left" href=""> 产品数据分析 </a>
-    <div class="box" style="float:right">
-      <input class="input" type="text" name="" placeholder="请输入商品内容">
-    <a class="search" href="../index/indexLogined1.html" >
-        <i class="search">搜 索</i>
-    </a>
- </div>
-</div>
+    {% endblock %}
+    {% block more %}
+    <a href="{{ url_for('loginBP.Merchant')}}">后 台</a>
+    <a href="{{ url_for('loginBP.Merchant')}}">用户中心</a>
+    <a href="{{ url_for('loginBP.Merchant')}}">购物车</a>
+    {% endblock %}
+{% block  shoppingCart %}
 {% endblock %}
-{% block left %}
+{% block  details %}
 <div class="left">
     <table>
     <tbody>
@@ -36,8 +30,6 @@
     </tbody>
      </table>
 </div>
-{% endblock %}
-{% block right %}
 <div class="right">
     <button type="button" class="button" onclick="dianwo()">添加品牌</button>
     <div class="zhezhao" id='zhezhao'>
@@ -81,16 +73,3 @@
 		</div>
     </div>
 {% endblock %}
-{% block scripts %}
-<script type="text/javascript">
-			document.getElementById('zhezhao').style.display="none";
-			function dianwo(){
-				document.getElementById('zhezhao').style.display="";
-			}
-			function hidder(){
-				document.getElementById('zhezhao').style.display="none";
-			}
-</script>
-{% endblock %}
-</body>
-</html>

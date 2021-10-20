@@ -21,7 +21,7 @@ def indexLogin():
     # goodskuDic=SkuViewModel.sku_collection(sku)
     brandsDic=[{"brandname":'品牌01'}]
     goodskuDic=[{"title":"商品001","price":"100元"}]
-    return render_template('index/indexLogined1.html',username=uname,brands=brandsDic,goodssku=goodskuDic)
+    return render_template('index/indexLogined.html',username=uname,brands=brandsDic,goodssku=goodskuDic)
 
 @indexBP.route('/search', methods=['GET'])
 def search(keywords):
@@ -30,4 +30,4 @@ def search(keywords):
     brandsDic = BrandViewModel.brand_collection(brands)
     sku = GoodsSku.query.filter(or_(GoodsSku.skuname== keywords, GoodsSku.skuid== keywords)).all()
     goodskuDic = SkuViewModel.sku_collection(sku)
-    return render_template('index/indexLogined1.html', username=uname, brands=brandsDic, goodssku=goodskuDic)
+    return render_template('index/indexLogined.html', username=uname, brands=brandsDic, goodssku=goodskuDic)
