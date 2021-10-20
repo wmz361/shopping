@@ -18,6 +18,8 @@ def create_app():
     app.register_blueprint(loginBP)
     app.register_blueprint(merchantBP)
     app.register_blueprint(goodsBP)
+    app.register_blueprint(userCenterBP)
+    app.register_blueprint(shoppingCartBP)
     db.init_app(app)
     # login_manager.init_app(app)
     # login_manager.login_view='web.index'  # 访问未授权页面时直接跳转到loginBP.login页面

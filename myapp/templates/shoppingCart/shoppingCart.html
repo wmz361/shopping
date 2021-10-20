@@ -2,19 +2,20 @@
 {% block title %}
     <title>购物车</title>
     <link rel="stylesheet" type="text/css" href="../../static/css/shoppingCart.css">
+    <script type="text/javascript" src="../../static/js/shoppingCart.js"></script>
 {% endblock %}
 {% block  details %}
 
 {% block  shoppingCart %}
- <a class="button" align="center" style="float:right" href="../shoppingCart/shoppingCart.html"> 首页</a>
+ <a class="button" align="center" style="float:right" href="{{ url_for('indexBP.index')}}"> 首页</a>
 {% endblock %}
 {% block  details %}
 <div class="left">
-        <a class="userCenter" align="center" href=""> 待收货 </a>
-        <a class="userCenter" align="center" href=""> 待发货 </a>
-        <a class="userCenter" align="center" href=""> 待评价 </a>
-        <a class="userCenter" align="center" href=""> 已收货 </a>
-        <a class="userCenter" align="center" href=""> 全部 </a>
+        <a class="userCenter" align="center" onclick=""> 待收货 </a>
+        <a class="userCenter" align="center" onclick=""> 待发货 </a>
+        <a class="userCenter" align="center" onclick=""> 待评价 </a>
+        <a class="userCenter" align="center" onclick=""> 已收货 </a>
+        <a class="userCenter" align="center" onclick=""> 全部 </a>
 </div>
 <div class="right"></div>
 {% endblock %}

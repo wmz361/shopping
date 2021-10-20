@@ -2,17 +2,18 @@
 {% block title %}
     <title>用户中心</title>
     <link rel="stylesheet" type="text/css" href="../../static/css/userCenter.css">
+    <script type="text/javascript" src="../../static/js/userCenter.js"></script>
 {% endblock %}
 {% block more %}
-<a href="{{ url_for('loginBP.Merchant')}}">后 台</a>
-<a href="{{ url_for('loginBP.Merchant')}}">首页</a>
+<a href="{{ url_for('merchantBP.Merchant')}}">后 台</a>
+<a href="{{ url_for('indexBP.index')}}">首 页</a>
 
 {% block  details %}
 <div class="left">
-        <a class="userCenter" align="center" href=""> 用户中心 </a>
-        <a class="userCenter" align="center" href=""> 地址管理 </a>
-        <a class="userCenter" align="center" href=""> 支付中心 </a>
-        <a class="userCenter" align="center" href=""> 我的收藏 </a>
+        <a class="userCenter" align="center" onclick=""> 用户中心 </a>
+        <a class="userCenter" align="center" onclick=""> 地址管理 </a>
+        <a class="userCenter" align="center" onclick=""> 支付中心 </a>
+        <a class="userCenter" align="center" onclick=""> 我的收藏 </a>
 </div>
 <div class="right"></div>
 {% endblock %}

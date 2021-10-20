@@ -5,16 +5,16 @@
     <script type="text/javascript" src="../../static/js/Merchant.js"></script>
 {% endblock %}
     {% block top %}
-    <a class="text1" align="center" style="float:left" href="" > 品牌管理 </a>
-    <a class="text1" align="center" style="float:left" href="" > 商品管理 </a>
-    <a class="text1" align="center" style="float:left" href="" > 订单管理 </a>
-    <a class="text1" align="center" style="float:left" href="" > 品牌数据分析 </a>
-    <a class="text1" align="center" style="float:left" href=""> 产品数据分析 </a>
+    <a class="text1" align="center" style="float:left" onclick="" > 品牌管理 </a>
+    <a class="text1" align="center" style="float:left" onclick="" > 商品管理 </a>
+    <a class="text1" align="center" style="float:left" onclick="" > 订单管理 </a>
+    <a class="text1" align="center" style="float:left" onclick="" > 品牌数据分析 </a>
+    <a class="text1" align="center" style="float:left" onclick=""> 产品数据分析 </a>
     {% endblock %}
     {% block more %}
-    <a href="{{ url_for('loginBP.Merchant')}}">后 台</a>
-    <a href="{{ url_for('loginBP.Merchant')}}">用户中心</a>
-    <a href="{{ url_for('loginBP.Merchant')}}">购物车</a>
+    <a href="{{ url_for('indexBP.index')}}">前 台</a>
+    <a href="{{ url_for('userCenterBP.userCenter')}}">用户中心</a>
+    <a href="{{ url_for('shoppingCartBP.shoppingCart')}}">购物车</a>
     {% endblock %}
 {% block  shoppingCart %}
 {% endblock %}

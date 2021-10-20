@@ -10,7 +10,7 @@ from myapp.models.goodsspu import GoodsSpu
 
 
 merchantBP = Blueprint("merchantBP",__name__)
-@merchantBP.route('/Merchant',methods=['GET'])
+@merchantBP.route('/merchant',methods=['GET'])
 @login_required
 def Merchant():
     return render_template('Merchant.html')
