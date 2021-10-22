@@ -1,11 +1,12 @@
 from flask import Flask
 from flask_mail import Mail
 from myapp.models.base import db
-from flask_login import LoginManager
 from myapp.web.Merchant import merchantBP
 from myapp.web.goods import goodsBP
 from myapp.web.index import indexBP
 from myapp.web.login import loginBP
+from myapp.web.shoppingCart import shoppingCartBP
+from myapp.web.userCenter import userCenterBP
 
 # login_manager=LoginManager()
 mail=Mail()
@@ -22,7 +23,7 @@ def create_app():
     app.register_blueprint(shoppingCartBP)
     db.init_app(app)
     # login_manager.init_app(app)
-    # login_manager.login_view='web.index'  # 访问未授权页面时直接跳转到loginBP.login页面
+    # login_manager.login_view='loginBP.index'  # 访问未授权页面时直接跳转到loginBP.login页面
     # login_manager.login_message='请先注册或者登录！'  # 访问未授权页面时直接跳转到loginBP.login页面时的提示信息
     mail.init_app(app)
 

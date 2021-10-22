@@ -27,24 +27,21 @@
             width: 60%;
             height: 100%;
             float:left;
-            background: rgb(229,211,170);
         }
          .middleRight {
             width: 40%;
             height: 100%;
-            position: absolute;
-            top: 30%;
-            left: 60%;
+            float:left;
         }
          img{
-             position: absolute;
-             left: 5%;
-			 top: 22.5%;
-             height: 55%;
+             position: relative;
+             left: 25%;
+			 top: 20%;
+             height: 60%;
              width: 50%;
         }
          .mytxt {
-            width: 120%;
+            width: 65%;
             height: 10%;
             color:#333;
             line-height:normal;
@@ -107,6 +104,6 @@
             white-space: nowrap;
         }
 a{color: black;text-decoration:none;}
-.form1{width:50%;height:12%;line-height:50px;table-layout:fixed;left:60%;top: 30%;}
+.form1{width:60%;height:12%;line-height:50px;table-layout:fixed;position: relative;left:20%;top: 10%;}
 
 
