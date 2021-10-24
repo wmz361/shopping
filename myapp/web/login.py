@@ -8,35 +8,34 @@ from myapp.models.user import User
 loginBP = Blueprint("loginBP",__name__)
 @loginBP.route('/register', methods=['GET','POST'])
 def register():
-    if request.method == 'POST' :
-        registerForm = RegisterForm(request.form)
-        if registerForm.validate():
-            with db.auto_commit():
-                user = User()
-                user.set_attrs(registerForm.data)
-                db.session.add(user)
+    registerForm = RegisterForm(request.form)
+    print('')
+    if request.method == 'POST' and registerForm.validate():
+        with db.auto_commit():
+            user = User()
+            user.set_attrs(registerForm.data)
+            db.session.add(user)
+            login_user(user, False)
             flash('注册成功，跳转至首页！')
             return redirect(url_for('indexBP.indexLogin',uname=registerForm.data['username']))
-        else:
-            flash('数据验证失败！')
     return render_template('login/register.html')
 
 @loginBP.route('/login', methods=['GET','POST'])
 def login():
     if request.method == 'POST':
         loginForm = LoginForm(request.form)
-        if loginForm.validate():
-            user = User.query.filter(User.username==loginForm.data['username']).first()
-            if user and user.check_password(loginForm.password.data):
-                # 可以写入用户信息
-                login_user(user,remember=True)
-                next=request.args.get('next')  # 获取到url中next参数的值
-                if not next or not next.startswith('/'):
-                    next=url_for('loginBP.indexLogin',uname=loginForm.data['username'])
-                flash('登录成功！')
-                return redirect(next)
-            else:
-                flash('账号不存在或者密码错误！')
+        # if loginForm.validate():
+        user = User.query.filter(User.username==loginForm.data['username']).first()
+        if user and user.check_password(loginForm.password.data):
+            # 可以写入用户信息
+            login_user(user,remember=True)
+            next=request.args.get('next')  # 获取到url中next参数的值
+            if not next or not next.startswith('/'):
+                next=url_for('loginBP.indexLogin',uname=loginForm.data['username'])
+            flash('登录成功！')
+            return redirect(next)
+        else:
+            flash('账号不存在或者密码错误！')
     return render_template('login/login.html')
 
 @loginBP.route('/reset/password', methods=['GET','POST'])

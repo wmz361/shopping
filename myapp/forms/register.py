@@ -17,18 +17,26 @@ class ResetPasswordForm(Form):
 
 class LoginForm(Form):
     username = StringField(validators=[DataRequired()])
+    password = StringField()
     # def validate_username(self, field):
     #     """ 校验名称是否存在 """
     #     if not User.query.filter_by(username=field.data).first():
     #         raise ValidationError('用户名未注册')
 
-class RegisterForm(LoginForm,ResetPasswordForm,PhoneNumForm):
-    gender=IntegerField()
+# class RegisterForm(LoginForm,ResetPasswordForm,PhoneNumForm):
+#     gender=IntegerField()
+#     birthday=DateField()
+#     def validate_username(self,field):
+#         """ 校验名称是否重复 """
+#         if User.query.filter_by(username=field.data).first():
+#             raise ValidationError('用户名已存在')
+
+class RegisterForm(Form):
+    username=StringField()
+    password=StringField()
+    phone_num=StringField()
+    email=StringField()
     birthday=DateField()
-    def validate_username(self,field):
-        """ 校验名称是否重复 """
-        if User.query.filter_by(username=field.data).first():
-            raise ValidationError('用户名已存在')
 
 
 
