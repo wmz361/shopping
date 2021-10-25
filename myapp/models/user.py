@@ -10,8 +10,8 @@ from myapp.models.base import Base, db
 
 class User(UserMixin,Base):
 
-    __tablename__ = 'userCenter'
-    id = Column(Integer, primary_key=True)
+    __tablename__ = 'user'
+    userid = Column(Integer, primary_key=True)
     username = Column(String(24), nullable=False)
     phone_num = Column(String(18))
     role=Column(SmallInteger,default=0)

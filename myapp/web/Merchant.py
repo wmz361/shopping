@@ -11,12 +11,10 @@ from myapp.models.goodsspu import GoodsSpu
 
 merchantBP = Blueprint("merchantBP",__name__)
 @merchantBP.route('/merchant',methods=['GET'])
-@login_required
 def Merchant():
-    return render_template('Merchant.html')
+    return render_template('admin/Merchant.html')
 
 @merchantBP.route('/add_brand', methods=['GET', 'POST'])
-@login_required
 def add_brand():
     brandForm=NewBrandForm(request.form)
     if request.method == 'POST' and brandForm.validate():
@@ -25,17 +23,15 @@ def add_brand():
             brand.uid=current_user.id
             brand.set_attrs(brandForm.data)
             db.session.add(brand)
-        return redirect(url_for('MerchantBP.all_brand'))
     brands=Brand.query.all()
-    return render_template('admin/search_brand',brands=brands)
+    # return redirect(url_for('merchantBP.all_brand',brands=brands))
+    return render_template('admin/Merchant.html',brands=brands)
 
 @merchantBP.route('/search_brand', methods=['GET', 'POST'])
-@login_required
 def search_brand():
     pass
 
 @merchantBP.route('/add_sku', methods=['GET', 'POST'])
-@login_required
 def add_sku():
     skuForm=NewSKUForm(request.form)
     if request.method == 'POST' and skuForm.validate():
@@ -49,7 +45,6 @@ def add_sku():
     return render_template('admin/all_sku.html',goodSkus=sku)
 
 @merchantBP.route('/add_spu', methods=['GET', 'POST'])
-@login_required
 def add_spu():
     spuForm=NewSPUForm(request.form)
     if request.method == 'POST' and spuForm.validate():

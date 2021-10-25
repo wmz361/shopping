@@ -13,8 +13,8 @@
     {% endblock %}
     {% block more %}
     <a href="{{ url_for('indexBP.index')}}">前 台</a>
-    <a href="{{ url_for('userCenterBP.userCenter')}}">用户中心</a>
-    <a href="{{ url_for('shoppingCartBP.shoppingCart')}}">购物车</a>
+    <a href="{{ url_for('userCenterBP.userCenter',uname=username)}}">用户中心</a>
+    <a href="{{ url_for('shoppingCartBP.shoppingCart',uname=username)}}">购物车</a>
     {% endblock %}
 {% block  shoppingCart %}
 {% endblock %}
@@ -34,7 +34,7 @@
     <button type="button" class="button" onclick="dianwo()">添加品牌</button>
     <div class="zhezhao" id='zhezhao'>
 			<div class="tankuang">
-                <form name="form1" method="post" class="form1" enctype="multipart/form-data">
+                <form name="form1" method="post" class="form1" enctype="multipart/form-data" action="{{ url_for('merchantBP.add_brand',brands=brands)}}">
                 <table border="0">
                     <tr>
 					<td><label for="brandname" >品牌名称：</label></td>
@@ -63,7 +63,7 @@
                 </table>
                     <br>
                 <input type="submit" value="重 置"  class="button" onclick="toRegister()" style="float:right;color: black" /> &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <input type="submit" value="新 建" class="button" style="float:right;color: black"/> &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="submit" value="新 建" class="button" style="float:right;color: black" /> &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             </form>
 				<div id="header">
 					<span style="color:black;line-height: 70px;padding-left:40px;font-weight:bold">添加品牌</span>
