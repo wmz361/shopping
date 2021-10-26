@@ -17,6 +17,7 @@ class SpuViewModel:
         if data:
             returned['total'] = len(data)
             returned['spus'] = [cls.__cut_spu_data(spu) for spu in data]
+        return returned
 
     @classmethod
     def __cut_spu_data(cls, data):

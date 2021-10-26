@@ -17,6 +17,7 @@ class BrandViewModel:
         if data:
             returned['total'] = len(data)
             returned['brands'] = [cls.__cut_brand_data(brand) for brand in data]
+        return returned
 
     @classmethod
     def __cut_brand_data(cls,data):

@@ -7,6 +7,6 @@ function cancel(){
     document.form1.submit();
 }
 function toRegister(){
-    document.form1.action={{url_for('indexBP.register')}};
+    document.form1.action={{url_for('loginBP.register')}};
     document.form1.submit();
 }

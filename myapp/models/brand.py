@@ -15,5 +15,6 @@ class Brand(Base):
     brandurl= Column(String(256))  # 品牌主页url
     phone_num = Column(String(18))
     uid = Column(Integer)
+    brandfather=Column(Integer)
 
 

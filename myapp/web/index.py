@@ -10,18 +10,27 @@ indexBP = Blueprint("indexBP",__name__)
 
 @indexBP.route('/', methods=['GET'])
 def index():
-    return render_template('index/indexUnLogined.html')
+    brandsF = Brand.query.filter(Brand.status == 1, Brand.brandfather == None).all()
+    brandsDicFirstLevel = BrandViewModel.brand_collection(brandsF)
+    brandsS = Brand.query.filter(Brand.brandfather == 2).all()
+    brandsDicSecendLevel = BrandViewModel.brand_collection(brandsS)
+    sku = GoodsSku.query.filter(GoodsSku.brandid == 13).all()
+    goodskuDic = SkuViewModel.sku_collection(sku)
+    return render_template('index/indexUnLogined.html',brandsDicFirstLevel=brandsDicFirstLevel['brands'],
+                           goodssku=goodskuDic
+                           , brandsDicSecendLevel=brandsDicSecendLevel['brands'])
 
 @indexBP.route('/indexLogin', methods=['GET','POST'])
 def indexLogin():
     uname=request.args.get('uname')
-    # brands = Brand.query.filter_by().all()
-    # brandsDic = BrandViewModel.brand_collection(brands)
-    # sku=GoodsSku.query.filter_by().all()
-    # goodskuDic=SkuViewModel.sku_collection(sku)
-    brandsDic=[{"brandname":'品牌01'}]
-    goodskuDic=[{"title":"商品001","price":"100元"}]
-    return render_template('index/indexLogined.html',username=uname,brands=brandsDic,goodssku=goodskuDic)
+    brandsF = Brand.query.filter(Brand.status==1,Brand.brandfather==None).all()
+    brandsDicFirstLevel = BrandViewModel.brand_collection(brandsF)
+    brandsS = Brand.query.filter(Brand.brandfather == 2).all()
+    brandsDicSecendLevel = BrandViewModel.brand_collection(brandsS)
+    sku=GoodsSku.query.filter(GoodsSku.brandid==13).all()
+    goodskuDic=SkuViewModel.sku_collection(sku)
+    return render_template('index/indexLogined.html',username=uname,brandsDicFirstLevel=brandsDicFirstLevel['brands'],goodssku=goodskuDic
+                           ,brandsDicSecendLevel=brandsDicSecendLevel['brands'])
 
 @indexBP.route('/search', methods=['GET'])
 def search(keywords):

@@ -9,7 +9,7 @@ class GoodsSku(Base):
     __tablename__ = 'goodssku'
     skuid=Column(Integer, primary_key=True)
     skuname = Column(String(24), nullable=False)
-    skufatherid = Column(Integer, primary_key=True)
-    brandid = Column(Integer, primary_key=True)
+    skufatherid = Column(Integer)
+    brandid = Column(Integer)
     declaration=Column(String(200))
     uid = Column(Integer)
