@@ -186,11 +186,11 @@
 				border-radius: 5px;
 				margin: 5% auto;
 			}
-			#header{
+			.header{
 				height: 10%;
                 background: rgb(228,223,215);
 			}
-			#header-right{
+			.header-right{
 				position: absolute;
 				width: 10%;
 				height: 2%;

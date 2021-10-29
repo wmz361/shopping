@@ -42,7 +42,7 @@ def add_sku():
             db.session.add(sku)
         return redirect(url_for('MerchantBP.all_sku'))
     sku=GoodsSku.query.all()
-    return render_template('admin/all_sku.html',goodSkus=sku)
+    return render_template('admin/Merchant.html',goodSkus=sku)
 
 @merchantBP.route('/add_spu', methods=['GET', 'POST'])
 def add_spu():
@@ -55,7 +55,7 @@ def add_spu():
             db.session.add(spu)
         return redirect(url_for('MerchantBP.all_spu'))
     spu=GoodsSpu.query.all()
-    return render_template('admin/all_spu.html',goodSpus=spu)
+    return render_template('admin/Merchant.html',goodSpus=spu)
 
 
 
