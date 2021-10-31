@@ -49,6 +49,8 @@
             float:left;
             background: rgb(229,211,170);
             border-radius: 10px 0px 0px 10px;
+            margin:10px;
+            overflow:auto;
         }
         .goodssku {
             width: 100%;
@@ -60,7 +62,6 @@
             color: #DCDCDC;
             line-height:50px;
             font-weight:bold;
-
         }
 
          .three {

@@ -1,6 +1,6 @@
 class BrandViewModel:
     def __init__(self, data):
-        self.brandname = data.brandname
+        self.name = data.brandname
         self.logo = data.logo
         self.declaration = data.declaration # 品牌宣言
         self.brandstory = data.brandstory  # 品牌故事
@@ -22,8 +22,18 @@ class BrandViewModel:
     @classmethod
     def __cut_brand_data(cls,data):
         brand={
-            'brandname':data.brandname,
+            'name':data.brandname,
             'logo': data.logo,
             'declaration' : data.declaration # 品牌宣言
+        }
+        return brand
+
+    @classmethod
+    def add_brands(cls):
+        brand = {
+            'name':'品牌名称',
+            'declaration':'品牌宣言',
+            'brandid':'品牌url',
+            'phone_num':'品牌联系方式'
         }
         return brand

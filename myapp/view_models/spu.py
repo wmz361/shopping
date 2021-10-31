@@ -1,6 +1,6 @@
 class SpuViewModel:
     def __init__(self, data):
-        self.spuname = data['spuname']
+        self.name = data['spuname']
         self.skuid = data['skuid']
         self.spudescribe = data['spudescribe']  # 品牌描述
         self.stock = data['stock']  # 库存
@@ -22,10 +22,20 @@ class SpuViewModel:
     @classmethod
     def __cut_spu_data(cls, data):
         spu = {
-            'spuname': data.spuname,
+            'name': data.spuname,
             'spudescribe': data.spudescribe,
-            'stock': data.stock,  # 品牌宣言
+            'stock': data.stock,
             'price': data.price,
             'spupicture': data.spupicture,
+        }
+        return spu
+
+    @classmethod
+    def add_spus(cls):
+        spu = {
+            'name': '商品名称',
+            'spudescribe': '商品描述',
+            'stock': '商品库存',
+            'price': '商品价格'
         }
         return spu

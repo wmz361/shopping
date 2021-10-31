@@ -1,6 +1,6 @@
 class SkuViewModel:
     def __init__(self, data):
-        self.skuname = data.skuname
+        self.name = data.skuname
         self.skufatherid = data.skufatherid
         self.declaration=data.declaration
         self.brandid = data.brandid
@@ -20,7 +20,17 @@ class SkuViewModel:
     @classmethod
     def __cut_sku_data(cls, data):
         sku = {
-            'skuname': data.skuname,
+            'name': data.skuname,
             'declaration': data.declaration  # 品牌宣言
         }
         return sku
+
+    @classmethod
+    def add_skus(cls):
+        dataSku={}
+        dataSku['name']='品类名称'
+        dataSku['skufatherid']='父类skuID'
+        dataSku['brandid']='所属品牌ID'
+        return dataSku
+
+

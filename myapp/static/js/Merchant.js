@@ -5,3 +5,4 @@ function dianwo(){
 function hidder(){
 		document.getElementById('zhezhao').style.display="none";
 }
+
