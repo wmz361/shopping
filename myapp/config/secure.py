@@ -1,3 +1,4 @@
+# 数据库连接及配置
 SQLALCHEMY_DATABASE_URI = 'mysql+cymysql://wmz2018:Zhuzhujiayou7@rm-wz94v5i7iuca05ftmqo.mysql.rds.aliyuncs.com:3306/shopping'
 SECRET_KEY = '\x88D\xf09\x91\x07\x98\x89\x87\x96\xa0A\xc68\xf9\xecJ:U\x17\xc5V\xbe\x8b\xef\xd7\xd8\xd3\xe6\x98*4'
 SQLALCHEMY_TRACK_MODIFICATIONS=True
@@ -12,3 +13,9 @@ MAIL_USERNAME = '2084346808@qq.com'
 MAIL_PASSWORD = 'gylcbtlwzaqzdaha'
 # MAIL_SUBJECT_PREFIX = '[国货集市]'
 # MAIL_SENDER = '国货集市 <2084346808@qq.com>'
+
+# redis配置
+REDIS_HOST='139.224.18.59'
+REDIS_PORT=6379
+REDIS_DB=0
+REDIS_EXPIRE=86400000

@@ -7,6 +7,7 @@ from myapp.web.goods import goodsBP
 from myapp.web.index import indexBP
 from myapp.web.login import loginBP
 from myapp.web.shoppingCart import shoppingCartBP
+from myapp.web.test001 import testBP
 from myapp.web.userCenter import userCenterBP
 
 # login_manager=LoginManager()
@@ -22,6 +23,7 @@ def create_app():
     app.register_blueprint(goodsBP)
     app.register_blueprint(userCenterBP)
     app.register_blueprint(shoppingCartBP)
+    app.register_blueprint(testBP)
     db.init_app(app)
     # login_manager.init_app(app)
     # login_manager.login_view='loginBP.index'  # 访问未授权页面时直接跳转到loginBP.login页面
