@@ -25,7 +25,13 @@ $(function() {
 			url: "/merchant",//后端请求
 			data: data,
 			success: function (result) {
-				$(".right").html(data);
+				if($(this).parent().attr('class')=='left'){
+					$(".right").html(data);
+				}
+				else if ($(this).parent().attr('class')=='tabTop'){
+					$(".left").html(data);
+					$(".right").html(data);
+				}
 			},
 			error: function (result) {
 				$(".right").html("获取数据失败！");
