@@ -29,7 +29,7 @@ def create_logger():
     flask_logger.addHandler(console_handler)
 
     # 创建文件处理器
-    file_handler = RotatingFileHandler(filename='flask.log', maxBytes=100 * 1024 * 1024, backupCount=10)  # 转存文件处理器  当达到限定的文件大小时, 可以将日志转存到其他文件中
+    file_handler = RotatingFileHandler(filename='/log/app.log', maxBytes=100 * 1024 * 1024, backupCount=10)  # 转存文件处理器  当达到限定的文件大小时, 可以将日志转存到其他文件中
 
     # 给处理器设置输出格式
     file_formatter = RequestFormatter(fmt='[%(asctime)s] %(remote_addr)s requested %(url)s %(name)s %(levelname)s %(pathname)s %(lineno)d %(message)s')

@@ -10,7 +10,6 @@ from myapp.web.shoppingCart import shoppingCartBP
 from myapp.web.test001 import testBP
 from myapp.web.userCenter import userCenterBP
 
-# login_manager=LoginManager()
 mail=Mail()
 
 def create_app():
