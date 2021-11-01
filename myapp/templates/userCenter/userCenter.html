@@ -10,10 +10,17 @@
 {% endblock %}
 {% block  details %}
 <div class="left">
-        <a class="userCenter" align="center" onclick=""> 用户中心 </a>
-        <a class="userCenter" align="center" onclick=""> 地址管理 </a>
-        <a class="userCenter" align="center" onclick=""> 支付中心 </a>
-        <a class="userCenter" align="center" onclick=""> 我的收藏 </a>
+    {% for leftTab in ['用户中心','地址管理','待评价','支付中心','我的收藏'] %}
+            <div class="leftTab" align="center" >
+                <a href="#" style="color: #333333;" > {{leftTab}} </a>
+            </div>
+    {% endfor %}
 </div>
-<div class="right"></div>
+<div class="right">
+    {% for address in addresses %}
+           <div class="address" align="center">
+              <a href="#" style="color: #333333;">{{ address['name'] }}</a>
+            </div>
+     {% endfor %}
+</div>
 {% endblock %}

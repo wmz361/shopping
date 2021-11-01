@@ -3,29 +3,22 @@
     <title>首页</title>
     <link rel="stylesheet" type="text/css" href="../../static/css/index.css">
     <script type="text/javascript" src="../../static/js/index.js"></script>
+
 {% endblock %}
 {% block  details %}
 <div class="top2">
-    <table>
-    <tbody>
     {% for brand in brandsDicSecendLevel %}
-           <td class="brandsDicSecendLevel" align="center">
+           <div class="brandsDicSecendLevel" align="center">
               <a href="#" style="color: #333333;">{{ brand['brandname'] }}</a>
-            </td>
+            </div>
      {% endfor %}
-    </tbody>
-    </table>
 </div>
 <div class="left">
-     <table>
-    <tbody>
     {% for brand in brandsDicFirstLevel %}
-           <td class="goodssku" align="center">
+           <div class="goodssku" align="center">
               <a href="#" style="color: #333333;">{{ brand['brandname'] }}</a>
-            </td>
+            </div>
      {% endfor %}
-    </tbody>
-     </table>
 </div>
 <div class="right">
     <div style="height:13%;width:100%">
@@ -33,17 +26,15 @@
         <a class="button" align="center" style="float:left"  onclick="">销 量</a>
         <a class="button" align="center" style="float:left" onclick=""> 最 新</a>
     </div>
-    <table style="height:80%;width:100%;overflow:auto;">
-    <tbody>
+    <div style="height:80%;width:100%;overflow:auto;">
     {% for good in goodssku['skus'] %}
-           <td class="goods" style="border:10px solid rgb(228,223,215);">
+           <div class="goods" style="border:10px solid rgb(228,223,215);">
                <img src="../../static/image/清明上河图.png" style="height: 70%"/>
               <a href="#" style="color: #333333;">商品名称：{{ good['skuname'] }}</a><br>
               <a href="#" style="color: #333333;">商品描述：{{ good['declaration'] }}</a>
-            </td>
+            </div>
         {% endfor %}
-    </tbody>
-    </table>
+    </div>
     <div style="height:7%;width:100%;float:right">
         <a class="total"> 共 {{ goodssku.total }} 条记录</a>
     </div>

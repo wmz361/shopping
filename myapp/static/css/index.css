@@ -41,7 +41,7 @@
             float:left;
             background: rgb(228,223,215);
              border-radius: 5px 0px 0px 5px;
-             overflow：hidden;
+             overflow:hidden;
         }
          .goods {
             width: 17%;
@@ -176,6 +176,15 @@
 .dropdown:hover .button {
     background-color:rgb(229,211,170);
 }
+
+.top2 .current{
+            background:rgb(229,211,170);
+            border:1px rgb(228,223,215)
+        }
+.left .current {
+            background: rgb(229, 211, 170);
+            border: 1px rgb(228, 223, 215)
+        }
 
 
 

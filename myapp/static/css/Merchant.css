@@ -250,10 +250,11 @@
             margin:10px;
             overflow:auto;
         }
-        .top1 .current{
+        .top2 .current{
             background:rgb(229,211,170);
             border:1px rgb(228,223,215)
         }
-        .left .current{
-            background:rgb(229,211,170);
-            border:1px rgb(228,223,215)
+        .left .current {
+            background: rgb(229, 211, 170);
+            border: 1px rgb(228, 223, 215)
+        }

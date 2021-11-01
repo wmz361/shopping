@@ -3,20 +3,6 @@
     <title>商家后台</title>
     <link rel="stylesheet" type="text/css" href="../../static/css/Merchant.css">
     <script type="text/javascript" src="../../static/js/Merchant.js"></script>
-    <script type="text/javascript">
-        $(function(){
-			var $btn = $('.top2 div');
-			var $div = $('.left div');
-			$btn.click(function(){
-				// 当前点击的按钮加上current样式后，除了当前，其他的按钮去掉current样式
-				$(this).addClass('current').siblings().removeClass('current');
-				})
-            $div.click(function(){
-            // 当前点击的按钮加上current样式后，除了当前，其他的按钮去掉current样式
-            $(this).addClass('current').siblings().removeClass('current');
-            })
-			})
-</script>
 {% endblock %}
     {% block top %}
     <div class="top2" style="width:50%;height:100%">
