@@ -53,7 +53,15 @@ class Base(db.Model):
         for key, value in attrs.items():
             if hasattr(self, key) and key != 'id':
                 setattr(self, key, value)
+    @classmethod
+    def to_dict(cls):
+        ''' 把查询出来的内容转换为字典 '''
+        return {c.name: getattr(cls, c.name) for c in cls.__table__.columns}
 
+    # 将查出来的所有对象都转换成json的函数
+    def to_json(all_vendors):
+        v = [ven.to_dict() for ven in all_vendors]
+        return v
 
 
 

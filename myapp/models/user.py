@@ -13,9 +13,9 @@ class User(UserMixin,Base):
     __tablename__ = 'user'
     userid = Column(Integer, primary_key=True)
     username = Column(String(24), nullable=False)  # 用户名称
-    phone_num = Column(String(18))  # 手机号
+    phone_num = Column(String(18),nullable=False)  # 手机号
     role=Column(SmallInteger,default=0)  # 用户角色（普通买家，店家，管理员）
-    gender=Column(SmallInteger,default=0)  # 性别
+    gender=Column(SmallInteger,default=0)  # 性别 0为女，1为男
     sign=Column(UnicodeText)  # 签名
     avatar=Column(LargeBinary)  # 头像
     _password = Column('password', String(128),nullable=False)  # 密码

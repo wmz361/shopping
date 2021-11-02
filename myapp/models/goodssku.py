@@ -14,5 +14,6 @@ class GoodsSku(Base):
     uid = Column(Integer)  # 商品发布人员
     describe=Column(UnicodeText)  # 商品描述
     picture=Column(LargeBinary)  # 商品图片
+    sales=Column(Integer)  # 销量
 
 
