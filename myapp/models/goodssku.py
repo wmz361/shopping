@@ -1,5 +1,4 @@
-from sqlalchemy import Column, Integer, String, SmallInteger, UnicodeText, LargeBinary,Date
-from werkzeug.security import generate_password_hash
+from sqlalchemy import Column, Integer, String, UnicodeText, LargeBinary
 
 from myapp.models.base import  Base
 
