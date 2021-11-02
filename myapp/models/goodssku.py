@@ -8,8 +8,12 @@ class GoodsSku(Base):
 
     __tablename__ = 'goodssku'
     skuid=Column(Integer, primary_key=True)
-    skuname = Column(String(24), nullable=False)
-    skufatherid = Column(Integer)
-    brandid = Column(Integer)
-    declaration=Column(String(200))
-    uid = Column(Integer)
+    skuname = Column(String(24), nullable=False)  # 商品名称
+    brandid = Column(Integer)  # 所属品牌ID
+    sortId=Column(Integer)  # 所属分类ID
+    introduction=Column(String(200))  # 商品简介
+    uid = Column(Integer)  # 商品发布人员
+    describe=Column(UnicodeText)  # 商品描述
+    picture=Column(LargeBinary)  # 商品图片
+
+
