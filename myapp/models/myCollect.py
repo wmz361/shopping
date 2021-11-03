@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, UnicodeText, LargeBinary
+from sqlalchemy import Column, Integer
 from myapp.models.base import  Base
 
 

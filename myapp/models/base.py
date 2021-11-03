@@ -1,7 +1,7 @@
 from datetime import datetime
 from contextlib import contextmanager
 from sqlalchemy import Column, Integer, SmallInteger
-from flask import current_app
+from flask import current_app, jsonify
 from flask_sqlalchemy import SQLAlchemy as _SQLAlchemy , BaseQuery
 
 __all__ = ['db', 'Base']
@@ -54,14 +54,16 @@ class Base(db.Model):
             if hasattr(self, key) and key != 'id':
                 setattr(self, key, value)
 
-    def to_dict(self):
+    def to_dict(self,attrs):
         ''' 把查询出来的内容转换为字典 '''
-        return {c.name: getattr(self, c.name) for c in self.__table__.columns}
+        itemDic={}
+        for key, value in attrs.items():
+            if hasattr(self, key) and key != 'id':
+                itemDic[key]=value
+        return itemDic
 
-    # 将查出来的所有对象都转换成json的函数
-    def to_json(all_vendors):
-        v = [ven.to_dict() for ven in all_vendors]
-        return v
+
+
 
 
 

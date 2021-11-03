@@ -5,7 +5,8 @@ class BrandViewModel:
         self.declaration = data.declaration # 品牌宣言
         self.brandstory = data.brandstory  # 品牌故事
         self.brandurl = data.brandurl  # 品牌主页url
-        self.phone_num = data.phone_num
+        self.phone_num = data.phone_num  # 品牌联系方式
+        self.uid=data.uid  # 品牌主理人名称
 
     @classmethod
     def brand_collection(cls,data,keyword=''):

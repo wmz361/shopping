@@ -6,6 +6,9 @@ class SpuViewModel:
         self.stock = data['stock']  # 库存
         self.price = data['price']
         self.spupicture = data['spupicture']  # 图片
+        self.isDefult=data.isDefult  # 是否是默认spu
+        self.spuid = data.spuid
+
 
     @classmethod
     def spu_collection(cls, data, keyword=''):

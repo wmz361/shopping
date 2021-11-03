@@ -1,26 +1,9 @@
 class CommentViewModel:
     def __init__(self, data):
-        self.skuname = data.skuname
-        self.skufatherid = data.skufatherid
-        self.declaration=data.declaration
-        self.brandid = data.brandid
-
-    @classmethod
-    def comment_collection(cls, data, keyword=''):
-        returned = {
-            'skus': [],
-            'total': 0,
-            'keyword': keyword
-        }
-        if data:
-            returned['total'] = len(data)
-            returned['skus'] = [cls.__cut_sku_data(sku) for sku in data]
-        return returned
-
-    @classmethod
-    def __cut_sku_data(cls, data):
-        sku = {
-            'skuname': data.skuname,
-            'declaration': data.declaration  # 品牌宣言
-        }
-        return sku
+        self.commentId=data.commentId
+        self.type = data.type  # 评论类型，好评、差评、一般
+        self.order_id = data.order_id  # 被评论订单id
+        self.comment_id = data.comment_id  # 被评论的评论id
+        self.from_id = data.from_id  # 评论人id
+        self.content = data.content  # 评论内容
+        self.content_picture = data.content_picture  # 评论的图片或视频

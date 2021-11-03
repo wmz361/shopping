@@ -1,6 +1,8 @@
+from flask import jsonify
 from sqlalchemy import desc
 
 from myapp.models.goodssku import GoodsSku
+from myapp.view_models.sku import SkuViewModel
 
 
 class indexAPI():
@@ -10,6 +12,6 @@ class indexAPI():
         ''' 根据销量排序 '''
         goodsSku=GoodsSku()
         goods=GoodsSku.query.order_by(desc(goodsSku.sales)).all()
-
-        return goods
+        goods1=SkuViewModel(goods)
+        return jsonify(errno=200, errmsg="OK", data=goods1)
 
