@@ -1,6 +1,6 @@
 # coding=utf-8
 from operator import or_
-from flask import render_template, request, Blueprint
+from flask import render_template, request, Blueprint, current_app
 from myapp.models.brand import Brand
 from myapp.models.goodssku import GoodsSku
 from myapp.view_models.brand import BrandViewModel
@@ -16,6 +16,7 @@ def index():
     brandsDicSecendLevel = BrandViewModel.brand_collection(brandsS)
     sku = GoodsSku.query.filter(GoodsSku.brandid == 13).all()
     goodskuDic = SkuViewModel.sku_collection(sku)
+    current_app.logger.error('错误信息')
     return render_template('index/indexUnLogined.html',brandsDicFirstLevel=brandsDicFirstLevel['brands'],
                            goodssku=goodskuDic
                            , brandsDicSecendLevel=brandsDicSecendLevel['brands'])

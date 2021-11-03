@@ -1,23 +1,23 @@
 from flask import current_app
 from flask_login import UserMixin
-from sqlalchemy import Column, Integer, String, SmallInteger, UnicodeText, LargeBinary,Date
+from sqlalchemy import Column, Integer, String, SmallInteger, UnicodeText,Date
 from werkzeug.security import generate_password_hash, check_password_hash
 from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
-# from myapp import login_manager
 from myapp.libs.error_code import NotFound, AuthFailed
 from myapp.models.base import Base, db
 
 
 class User(UserMixin,Base):
+    """ 用户信息表 """
 
     __tablename__ = 'user'
     userid = Column(Integer, primary_key=True)
-    username = Column(String(24), nullable=False)  # 用户名称
-    phone_num = Column(String(18),nullable=False)  # 手机号
+    user_name = Column(String(24),unique=True, nullable=False)  # 用户名称
+    phone_num = Column(String(18),nullable=False,unique=True)  # 手机号
     role=Column(SmallInteger,default=0)  # 用户角色（普通买家，店家，管理员）
     gender=Column(SmallInteger,default=0)  # 性别 0为女，1为男
     sign=Column(UnicodeText)  # 签名
-    avatar=Column(LargeBinary)  # 头像
+    avatar=Column(String(128))  # 头像路径
     _password = Column('password', String(128),nullable=False)  # 密码
     birthday=Column(Date)  # 出生日期
 

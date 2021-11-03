@@ -1,10 +1,11 @@
-from sqlalchemy import Column, Integer, String, SmallInteger, UnicodeText, LargeBinary,Date
+from sqlalchemy import Column, Integer, String
 from myapp.models.base import  Base
 
 
 class payType(Base):
+    """ 支付方式 """
 
     __tablename__ = 'payType'
     payTypeId=Column(Integer, primary_key=True)
-    payTypeName=Column(String)  # 支付方式name
-    payTypeLogo = Column(LargeBinary)  # 支付方式图标
+    payType_name=Column(String(64),nullable=False)  # 支付方式name
+    payType_logo = Column(String(128),nullable=False)  # 支付方式图标

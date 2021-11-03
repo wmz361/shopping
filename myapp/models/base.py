@@ -1,7 +1,7 @@
 from datetime import datetime
 from contextlib import contextmanager
-from sqlalchemy import Column, Integer, SmallInteger
-from flask import current_app, jsonify
+from sqlalchemy import Column, Integer, SmallInteger, Date
+from flask import current_app
 from flask_sqlalchemy import SQLAlchemy as _SQLAlchemy , BaseQuery
 
 __all__ = ['db', 'Base']
@@ -28,12 +28,14 @@ class Query(BaseQuery):
             kwargs['status'] = 1
         return super(Query, self).filter_by(**kwargs)
 
+# 先定义db
 db = SQLAlchemy(query_class=Query)
 
 class Base(db.Model):
     __abstract__ = True
     create_time = Column('create_time', Integer)
     status = Column(SmallInteger, default=1)
+    update_time=Column('update_time', Date,default=datetime.now(),onupdate=datetime.now())
 
     def __init__(self):
         self.create_time = int(datetime.now().timestamp())
