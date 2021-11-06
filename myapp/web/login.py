@@ -1,7 +1,7 @@
 # coding=utf-8
 from flask import render_template, request, redirect, url_for, flash, Blueprint
 from flask_login import login_user
-from myapp.forms.register import RegisterForm, LoginForm, PhoneNumForm, EmailForm, ResetPasswordForm
+from myapp.forms.register import RegisterForm, LoginForm, PhoneNumForm,ResetPasswordForm
 from myapp.models.base import db
 from myapp.models.user import User
 
@@ -37,24 +37,24 @@ def login():
                 flash('账号不存在或者密码错误！')
     return render_template('login/login.html')
 
-@loginBP.route('/reset/password', methods=['GET','POST'])
-def forget_password_request():
-    if  'phone_num' in request.form.keys():
-        form = PhoneNumForm(request.form)
-        if request.method=='POST' and form.validate():
-            account_phoneNum=form.phone_num.data
-            user=User.query.filter_by(phone_num=account_phoneNum).first_or_404()
-            redirect(url_for('loginBP.login'))
-    elif 'email' in request.form.keys():
-        form = EmailForm(request.form)
-        if request.method == 'POST' and form.validate():
-            account_email = form.email.data
-            user = User.query.filter_by(phone_num=account_email).first_or_404()
-            from myapp.libs.email import send_email
-            send_email(form.email.data,'重置你的密码','login/reset_password_request.html',user=user,token=user.generate_token())
-            flash('验证邮件已发送至您的邮箱，请注意查收！')
-            return redirect(url_for('loginBP.login'))
-    return render_template('login/reset_password_request.html')
+# @loginBP.route('/reset/password', methods=['GET','POST'])
+# def forget_password_request():
+#     if  'phone_num' in request.form.keys():
+#         form = PhoneNumForm(request.form)
+#         if request.method=='POST' and form.validate():
+#             account_phoneNum=form.phone_num.data
+#             user=User.query.filter_by(phone_num=account_phoneNum).first_or_404()
+#             redirect(url_for('loginBP.login'))
+#     elif 'email' in request.form.keys():
+#         form = EmailForm(request.form)
+#         if request.method == 'POST' and form.validate():
+#             account_email = form.email.data
+#             user = User.query.filter_by(phone_num=account_email).first_or_404()
+#             from myapp.libs.email import send_email
+#             send_email(form.email.data,'重置你的密码','login/reset_password_request.html',user=user,token=user.generate_token())
+#             flash('验证邮件已发送至您的邮箱，请注意查收！')
+#             return redirect(url_for('loginBP.login'))
+#     return render_template('login/reset_password_request.html')
 
 @loginBP.route('/reset/password/<token>', methods=['GET','POST'])
 def reset_password(token):

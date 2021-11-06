@@ -1,0 +1,126 @@
+INFO _internal.py:87  * Restarting with stat
+WARNING _internal.py:87  * Debugger is active!
+INFO _internal.py:87  * Debugger PIN: 206-160-673
+INFO _internal.py:87  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:87 127.0.0.1 - - [05/Nov/2021 20:47:13] "GET /index HTTP/1.1" 301 -
+ERROR app.py:1420 Exception on /index/ [GET]
+Traceback (most recent call last):
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "E:\auto\shopping\myapp\web\index.py", line 13, in index
+    brandsF = Brand.query.filter(Brand.status == 1, Brand.brandfather == None).all()
+AttributeError: type object 'Brand' has no attribute 'brandfather'
+INFO _internal.py:87 127.0.0.1 - - [05/Nov/2021 20:47:13] "GET /index/ HTTP/1.1" 500 -
+INFO _internal.py:87 127.0.0.1 - - [05/Nov/2021 20:47:14] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py:87  * Restarting with stat
+WARNING _internal.py:87  * Debugger is active!
+INFO _internal.py:87  * Debugger PIN: 206-160-673
+INFO _internal.py:87  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ERROR app.py:1420 Exception on /index/ [GET]
+Traceback (most recent call last):
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "E:\auto\shopping\myapp\web\index.py", line 13, in index
+    brandsF = Brand.query.filter(Brand.status == 1, Brand.brandfather == None).all()
+AttributeError: type object 'Brand' has no attribute 'brandfather'
+INFO _internal.py:87 127.0.0.1 - - [05/Nov/2021 20:52:16] "GET /index/ HTTP/1.1" 500 -
+INFO _internal.py:87  * Restarting with stat
+WARNING _internal.py:87  * Debugger is active!
+INFO _internal.py:87  * Debugger PIN: 206-160-673
+INFO _internal.py:87  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ERROR app.py:1420 Exception on /index/ [GET]
+Traceback (most recent call last):
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "E:\auto\shopping\myapp\web\index.py", line 13, in index
+    brandsF = Brand.query.filter(Brand.status == 1, Brand.brandfather == None).all()
+AttributeError: type object 'Brand' has no attribute 'brandfather'
+INFO _internal.py:87 127.0.0.1 - - [05/Nov/2021 20:53:05] "GET /index/ HTTP/1.1" 500 -
+INFO _internal.py:87 127.0.0.1 - - [05/Nov/2021 20:53:05] "GET /favicon.ico HTTP/1.1" 200 -
+ERROR app.py:1420 Exception on /index/ [GET]
+Traceback (most recent call last):
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "E:\auto\shopping\myapp\web\index.py", line 13, in index
+    brandsF = Brand.query.filter(Brand.status == 1, Brand.brandfather == None).all()
+AttributeError: type object 'Brand' has no attribute 'brandfather'
+INFO _internal.py:87 127.0.0.1 - - [05/Nov/2021 20:53:07] "GET /index/ HTTP/1.1" 500 -
+INFO _internal.py:87 127.0.0.1 - - [05/Nov/2021 20:53:07] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py:87  * Restarting with stat
+WARNING _internal.py:87  * Debugger is active!
+INFO _internal.py:87  * Debugger PIN: 206-160-673
+INFO _internal.py:87  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ERROR app.py:1420 Exception on /index/ [GET]
+Traceback (most recent call last):
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "E:\auto\shopping\myapp\web\index.py", line 17, in index
+    sku = GoodsSku.query.filter(GoodsSku.brandid == 13).all()
+AttributeError: type object 'GoodsSku' has no attribute 'brandid'
+INFO _internal.py:87 127.0.0.1 - - [05/Nov/2021 20:53:27] "GET /index/ HTTP/1.1" 500 -
+INFO _internal.py:87 127.0.0.1 - - [05/Nov/2021 20:53:28] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py:87  * Restarting with stat
+WARNING _internal.py:87  * Debugger is active!
+INFO _internal.py:87  * Debugger PIN: 206-160-673
+INFO _internal.py:87  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:87 127.0.0.1 - - [05/Nov/2021 20:54:20] "GET /login/register HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [05/Nov/2021 20:54:20] "GET /static/css/register.css HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [05/Nov/2021 20:54:20] "GET /static/js/login.js HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [05/Nov/2021 20:54:20] "GET /static/js/jquery-3.6.0.js HTTP/1.1" 304 -
+INFO _internal.py:87 127.0.0.1 - - [05/Nov/2021 20:54:20] "GET /static/image/%E6%B8%85%E6%98%8E%E4%B8%8A%E6%B2%B3%E5%9B%BE.png HTTP/1.1" 304 -
+INFO csrf.py:251 The CSRF token is missing.
+INFO _internal.py:87 127.0.0.1 - - [05/Nov/2021 20:54:47] "POST /login/register HTTP/1.1" 400 -
+INFO _internal.py:87  * Restarting with stat
+WARNING _internal.py:87  * Debugger is active!
+INFO _internal.py:87  * Debugger PIN: 206-160-673
+INFO _internal.py:87  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)

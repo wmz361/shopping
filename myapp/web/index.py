@@ -10,9 +10,9 @@ indexBP = Blueprint("indexBP",__name__)
 
 @indexBP.route('/', methods=['GET'])
 def index():
-    brandsF = Brand.query.filter(Brand.status == 1, Brand.brandfather == None).all()
+    brandsF = Brand.query.filter(Brand.status == 1).all()
     brandsDicFirstLevel = BrandViewModel.brand_collection(brandsF)
-    brandsS = Brand.query.filter(Brand.brandfather == 2).all()
+    brandsS = Brand.query.filter(Brand.status == 2).all()
     brandsDicSecendLevel = BrandViewModel.brand_collection(brandsS)
     sku = GoodsSku.query.filter(GoodsSku.brandid == 13).all()
     goodskuDic = SkuViewModel.sku_collection(sku)

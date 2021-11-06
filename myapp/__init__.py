@@ -37,15 +37,15 @@ def create_app():
     app.url_map.converters['re']=ReConverter
     app.config.from_object('myapp.config.secure')
     app.config.from_object('myapp.config.setting')
-    app.register_blueprint(indexBP,url_prefix='index')
-    app.register_blueprint(loginBP,url_prefix='login')
-    app.register_blueprint(merchantBP,url_prefix='merchant')
-    app.register_blueprint(goodsBP,url_prefix='goods')
-    app.register_blueprint(userCenterBP,url_prefix='userCenter')
-    app.register_blueprint(shoppingCartBP,url_prefix='shopping')
-    app.register_blueprint(testBP,url_prefix='test')
+    app.register_blueprint(indexBP,url_prefix='/index')
+    app.register_blueprint(loginBP,url_prefix='/login')
+    app.register_blueprint(merchantBP,url_prefix='/merchant')
+    app.register_blueprint(goodsBP,url_prefix='/goods')
+    app.register_blueprint(userCenterBP,url_prefix='/userCenter')
+    app.register_blueprint(shoppingCartBP,url_prefix='/shopping')
+    app.register_blueprint(testBP,url_prefix='/test')
     app.register_blueprint(html)
-    redis_store=Redis._get_r()
+    # redis_store=Redis._get_r()
     # db绑定app
     db.init_app(app)
     # 为flask添加csrf防护机制
