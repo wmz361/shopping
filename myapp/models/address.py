@@ -26,5 +26,5 @@ class Address(Base):
     mobile=Column(String(24), nullable=False)  # 收货人手机号
     remark=Column(UnicodeText)  # 详细地址
     # 外键关联
-    order = relationship('Order', backref='order')
+    order = relationship('Order', backref='address')
 

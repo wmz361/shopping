@@ -17,6 +17,6 @@ class Spu(Base):
     price=Column(Float, nullable=False)  # 价格
     index_image_url=Column(String(128), nullable=False)  # 主图的url
     # 外键关联
-    myCollect=relationship('MyCollect',backref='myCollect')
-    order = relationship('Order', backref='order')
-    spuImage=relationship('SpuImage', backref='spuImage')
+    myCollect=relationship('MyCollect',backref='spu')
+    order = relationship('Order', backref='spu')
+    spuImage=relationship('SpuImage', backref='spu')

@@ -22,13 +22,13 @@ class User(UserMixin,Base):
     _password = Column('password', String(128),nullable=False)  # 密码
     birthday=Column(Date)  # 出生日期
     # 外键关联信息
-    addresses=relationship('Address',backref='address')
-    brand=relationship('Brand',backref='brand')
-    comment=relationship('Comment',backref='comment')
-    myCollect=relationship('MyCollect',backref='myCollect')
-    order=relationship('Order',backref='order')
-    sku=relationship('Sku',backref='sku')
-    spu=relationship('Spu',backref='spu')
+    addresses=relationship('Address',backref='user')
+    brand=relationship('Brand',backref='user')
+    comment=relationship('Comment',backref='user')
+    myCollect=relationship('MyCollect',backref='user')
+    order=relationship('Order',backref='user')
+    sku=relationship('Sku',backref='user')
+    spu=relationship('Spu',backref='user')
 
     @property
     def password(self):

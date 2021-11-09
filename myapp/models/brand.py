@@ -17,7 +17,7 @@ class Brand(Base):
     phone_num = Column(String(18))  # 品牌联系方式
     uid = Column(Integer, ForeignKey('sp_user.userid'))  # 品牌主理人Id
     # 外键关联
-    sku = relationship('Sku', backref='sku')
+    sku = relationship('Sku', backref='brand')
 
 
 

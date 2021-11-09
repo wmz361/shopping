@@ -43,15 +43,21 @@ def create_app():
     app.register_blueprint(userCenterBP,url_prefix='/userCenter')
     app.register_blueprint(shoppingCartBP,url_prefix='/shopping')
     app.register_blueprint(testBP,url_prefix='/test')
+
     app.register_blueprint(html)
+
     # redis_store=Redis._get_r()
+
     # db绑定app
     db.init_app(app)
+
     # 为flask添加csrf防护机制
     CSRFProtect(app)
+
     # login_manager.init_app(app)
     # login_manager.login_view='loginBP.index'  # 访问未授权页面时直接跳转到loginBP.login页面
     # login_manager.login_message='请先注册或者登录！'  # 访问未授权页面时直接跳转到loginBP.login页面时的提示信息
+
     mail.init_app(app)
 
     with app.app_context():

@@ -14,4 +14,4 @@ class Sort(Base):
     declaration = Column(String(256))  # 分类描述
     fatherSort=Column(Integer, default=0)  # 父级分类名称
     # 外键关联
-    sku=relationship('Sku', backref='sku')
+    sku=relationship('Sku', backref='sort')

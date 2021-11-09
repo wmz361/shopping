@@ -18,6 +18,6 @@ class Sku(Base):
     sales=Column(Integer, default=0)  # 销量
     index_image_url=Column(Integer, nullable=False)  # 主图的url
     # 外键关联
-    spu = relationship('Spu', backref='spu')
+    spu = relationship('Spu', backref='sku')
 
 
