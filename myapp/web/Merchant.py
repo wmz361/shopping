@@ -5,8 +5,8 @@ from werkzeug.utils import redirect
 from myapp import db
 from myapp.forms.Merchant import NewBrandForm, NewSKUForm, NewSPUForm
 from myapp.models.brand import Brand
-from myapp.models.goodssku import GoodsSku
-from myapp.models.goodsspu import GoodsSpu
+from myapp.models.sku import Sku
+from myapp.models.spu import Spu
 from myapp.view_models.constant_data_processing import ConstantDataProcessing
 
 merchantBP = Blueprint("merchantBP",__name__)
@@ -36,12 +36,12 @@ def add_sku():
     skuForm=NewSKUForm(request.form)
     if request.method == 'POST' and skuForm.validate():
         with db.auto_commit():
-            sku=GoodsSku()
+            sku=Sku()
             sku.uid = current_user.id
             sku.set_attrs(skuForm.data)
             db.session.add(sku)
         return redirect(url_for('MerchantBP.all_sku'))
-    skus=GoodsSku.query.all()
+    skus=Sku.query.all()
     return redirect(url_for('merchantBP.Merchant', items=skus))
 
 @merchantBP.route('/add_spu', methods=['GET', 'POST'])
@@ -49,12 +49,12 @@ def add_spu():
     spuForm=NewSPUForm(request.form)
     if request.method == 'POST' and spuForm.validate():
         with db.auto_commit():
-            spu=GoodsSpu()
+            spu=Spu()
             spu.uid = current_user.id
             spu.set_attrs(spuForm.data)
             db.session.add(spu)
         return redirect(url_for('MerchantBP.all_spu'))
-    spus=GoodsSpu.query.all()
+    spus=Spu.query.all()
     return redirect(url_for('merchantBP.Merchant', items=spus))
 
 

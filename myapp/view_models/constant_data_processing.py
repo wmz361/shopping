@@ -1,5 +1,5 @@
 from myapp.models.brand import Brand
-from myapp.models.goodssku import GoodsSku
+from myapp.models.sku import Sku
 from myapp.view_models.brand import BrandViewModel
 from myapp.view_models.spu import SpuViewModel
 
@@ -21,7 +21,7 @@ class ConstantDataProcessing():
         skuType = ['审核通过的商品','未发布商品','已发布未审核商品','已发布未审核通过商品','已下架商品','库存不足商品','全部商品']
         skus=[]
         if n==0:
-            skus = GoodsSku.query.all()
+            skus = Sku.query.all()
         spuAttributes = SpuViewModel.add_spus()
         return skuType,skus,spuAttributes
     @classmethod

@@ -1,8 +1,8 @@
 from wtforms import  Form, StringField, FileField
 from wtforms.validators import ValidationError
 from myapp.models.brand import Brand
-from myapp.models.goodssku import GoodsSku
-from myapp.models.goodsspu import GoodsSpu
+from myapp.models.sku import Sku
+from myapp.models.spu import Spu
 from .base import DataRequired
 
 
@@ -35,7 +35,7 @@ class NewSKUForm(Form):
 
     def validate_skuname(self, field):
         """ 校验名称是否重复 """
-        if GoodsSku.query.filter_by(skuname=field.data).first():
+        if Sku.query.filter_by(skuname=field.data).first():
             raise ValidationError('sku已被注册')
 
 
@@ -52,5 +52,5 @@ class NewSPUForm(Form):
 
     def validate_spuname(self, field):
         """ 校验名称是否重复 """
-        if GoodsSpu.query.filter_by(spuname=field.data).first():
+        if Spu.query.filter_by(spuname=field.data).first():
             raise ValidationError('spu已被注册')

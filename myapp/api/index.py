@@ -1,7 +1,7 @@
 from flask import jsonify
 from sqlalchemy import desc
 
-from myapp.models.goodssku import GoodsSku
+from myapp.models.sku import GoodsSku
 from myapp.view_models.sku import SkuViewModel
 
 

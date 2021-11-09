@@ -1,6 +1,6 @@
 from flask import render_template, Blueprint
 from myapp.models.comment import Comment
-from myapp.models.goodsspu import GoodsSpu
+from myapp.models.spu import Spu
 from myapp.view_models.comment import CommentViewModel
 from myapp.view_models.spu import SpuViewModel
 

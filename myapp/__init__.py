@@ -1,5 +1,4 @@
 from logging.handlers import RotatingFileHandler
-
 from flask import Flask
 from flask_mail import Mail
 from flask_wtf import CSRFProtect
@@ -56,5 +55,8 @@ def create_app():
     mail.init_app(app)
 
     with app.app_context():
+        # 删除表
+        db.drop_all()
+        # 创建表
         db.create_all()
     return app

@@ -1,6 +1,7 @@
 from flask import current_app
 from flask_login import UserMixin
 from sqlalchemy import Column, Integer, String, SmallInteger, UnicodeText,Date
+from sqlalchemy.orm import relationship
 from werkzeug.security import generate_password_hash, check_password_hash
 from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
 from myapp.libs.error_code import NotFound, AuthFailed
@@ -10,7 +11,7 @@ from myapp.models.base import Base, db
 class User(UserMixin,Base):
     """ 用户信息表 """
 
-    __tablename__ = 'user'
+    __tablename__ = 'sp_user'
     userid = Column(Integer, primary_key=True)
     user_name = Column(String(24),unique=True, nullable=False)  # 用户名称
     phone_num = Column(String(18),nullable=False,unique=True)  # 手机号
@@ -20,6 +21,14 @@ class User(UserMixin,Base):
     avatar=Column(String(128))  # 头像路径
     _password = Column('password', String(128),nullable=False)  # 密码
     birthday=Column(Date)  # 出生日期
+    # 外键关联信息
+    addresses=relationship('Address',backref='address')
+    brand=relationship('Brand',backref='brand')
+    comment=relationship('Comment',backref='comment')
+    myCollect=relationship('MyCollect',backref='myCollect')
+    order=relationship('Order',backref='order')
+    sku=relationship('Sku',backref='sku')
+    spu=relationship('Spu',backref='spu')
 
     @property
     def password(self):
