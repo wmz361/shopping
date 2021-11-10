@@ -1,9 +1,6 @@
 # coding:utf-8
 
 from werkzeug.routing import BaseConverter
-from flask import session, jsonify, g
-# from ihome.utils.response_code import RET
-import functools
 
 
 # 定义正则转换器

@@ -1,3 +1,3 @@
 from flask import Blueprint
 
-api=Blueprint('web',__name__)
+apiBP=Blueprint('apiBP',__name__)

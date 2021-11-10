@@ -28,6 +28,12 @@ class Query(BaseQuery):
             kwargs['status'] = 1
         return super(Query, self).filter_by(**kwargs)
 
+    def order_by(self, **kwargs):
+        ''' 重写order_by，查询条件中默认添加status=1 '''
+        if 'status' not in kwargs.keys():
+            kwargs['status'] = 1
+        return super(Query, self).order_by(**kwargs)
+
 # 先定义db
 db = SQLAlchemy(query_class=Query)
 

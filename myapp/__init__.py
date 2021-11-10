@@ -43,7 +43,6 @@ def create_app():
     app.register_blueprint(userCenterBP,url_prefix='/userCenter')
     app.register_blueprint(shoppingCartBP,url_prefix='/shopping')
     app.register_blueprint(testBP,url_prefix='/test')
-
     app.register_blueprint(html)
 
     # redis_store=Redis._get_r()
@@ -59,6 +58,9 @@ def create_app():
     # login_manager.login_message='请先注册或者登录！'  # 访问未授权页面时直接跳转到loginBP.login页面时的提示信息
 
     mail.init_app(app)
+
+    # 为flask添加自定义转换器
+    app.url_map.converters['re']=ReConverter
 
     with app.app_context():
         # 删除表

@@ -10,11 +10,11 @@ indexBP = Blueprint("indexBP",__name__)
 
 @indexBP.route('/', methods=['GET'])
 def index():
-    brandsF = Brand.query.filter(Brand.status == 1).all()
+    brandsF = Brand.query.filter_by().all()
     brandsDicFirstLevel = BrandViewModel.brand_collection(brandsF)
-    brandsS = Brand.query.filter(Brand.status == 2).all()
+    brandsS = Brand.query.filter_by().all()
     brandsDicSecendLevel = BrandViewModel.brand_collection(brandsS)
-    sku = Sku.query.filter(Sku.brandid == 13).all()
+    sku = Sku.query.filter_by().all()
     goodskuDic = SkuViewModel.sku_collection(sku)
     current_app.logger.error('错误信息')
     return render_template('index/indexUnLogined.html',brandsDicFirstLevel=brandsDicFirstLevel['brands'],
