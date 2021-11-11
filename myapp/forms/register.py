@@ -1,19 +1,18 @@
-from wtforms import PasswordField, Form, StringField,IntegerField,DateField
-from wtforms.validators import Length, EqualTo, ValidationError, Email, Regexp
-from .base import DataRequired
+from wtforms.validators import Length, EqualTo, ValidationError, Regexp
+from .base import DataRequired, BaseForm
 from wtforms.fields import simple,html5
 from ..models.user import User
 
 
-class PhoneNumForm(Form):
+class PhoneNumForm(BaseForm):
     phone_num=simple.StringField('手机号',validators=[DataRequired(),Regexp(r'1[34578]\d{9}', message='手机号格式错误')])
 
-class ResetPasswordForm(Form):
+class ResetPasswordForm(BaseForm):
     password = simple.PasswordField(validators=[DataRequired(), Length(1, 100, message='密码长度至少需要在1个字符'),
                                                  EqualTo('password2', message='两次输入的密码不相同')])
     password2=simple.PasswordField(validators=[DataRequired(),Length(1,100)])
 
-class LoginForm(Form):
+class LoginForm(BaseForm):
     username = simple.StringField(validators=[DataRequired()])
     password = simple.StringField()
     def validate_username(self, field):

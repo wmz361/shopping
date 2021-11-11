@@ -7,3 +7,4 @@ userCenterBP = Blueprint("userCenterBP",__name__)
 def userCenter():
     uname = request.args.get('uname')
     return render_template('userCenter/userCenter.html',username=uname)
+

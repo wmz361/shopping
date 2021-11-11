@@ -1,12 +1,12 @@
-from wtforms import  Form, StringField, FileField
+from wtforms import StringField, FileField
 from wtforms.validators import ValidationError
 from myapp.models.brand import Brand
 from myapp.models.sku import Sku
 from myapp.models.spu import Spu
-from .base import DataRequired
+from .base import DataRequired, BaseForm
 
 
-class NewBrandForm(Form):
+class NewBrandForm(BaseForm):
     brandname = StringField(
         label='品牌名称：',  # 标签
         validators=[  # 验证方式
@@ -24,7 +24,7 @@ class NewBrandForm(Form):
             raise ValidationError('品牌已被注册')
 
 
-class NewSKUForm(Form):
+class NewSKUForm(BaseForm):
     skuname = StringField(
         label='sku名称：',  # 标签
         validators=[  # 验证方式
@@ -39,7 +39,7 @@ class NewSKUForm(Form):
             raise ValidationError('sku已被注册')
 
 
-class NewSPUForm(Form):
+class NewSPUForm(BaseForm):
     spuname = StringField(
         label='spu名称：',  # 标签
         validators=[  # 验证方式

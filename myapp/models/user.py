@@ -29,6 +29,7 @@ class User(UserMixin,Base):
     order=relationship('Order',backref='user')
     sku=relationship('Sku',backref='user')
     spu=relationship('Spu',backref='user')
+    account = relationship('Account', backref='user')
 
     @property
     def password(self):

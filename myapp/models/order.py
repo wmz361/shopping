@@ -1,7 +1,6 @@
-from sqlalchemy import Column, Integer, String, ForeignKey
+from sqlalchemy import Column, Integer, ForeignKey
 from sqlalchemy.orm import relationship
-
-from myapp.models.base import  Base
+from myapp.models.base import Base, db
 
 
 class Order(Base):
@@ -16,4 +15,14 @@ class Order(Base):
     userId=Column(Integer, ForeignKey('sp_user.userid'))  # 用户id
     # 外键关联
     comment = relationship('Comment', backref='order')
+
+    @staticmethod
+    def reset_status(orderId,newStatus):
+        ''' 重置订单状态 '''
+        with db.auto_commit():
+            order=Order.query.get(orderId)
+            order.status=newStatus
+            return True
+
+
 

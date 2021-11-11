@@ -4,6 +4,7 @@ from sqlalchemy import desc
 from myapp.api import apiBP
 from myapp.models.brand import Brand
 from myapp.models.sku import Sku
+from myapp.models.sort import Sort
 from myapp.utils.exception_catch import exceptionCatch
 from myapp.utils.response_code import RET
 from myapp.view_models.brand import BrandViewModel
@@ -11,14 +12,16 @@ from myapp.view_models.sku import SkuViewModel
 
 ec=exceptionCatch()
 
-@apiBP.route('/sortingByRecommend',method=['GET'])
-def sortingByRecommend(page=1,pageSize=20):
+@apiBP.route('/index',method=['GET'])
+def index(page=1,pageSize=20):
     ''' 根据销量排序 '''
     # 获取数据库中数据
     with ec.dataBase_exception():
-        sorts_left = Brand.query.filter_by().all()
-        sorts_top = Brand.query.filter_by().all()
-        skus=Sku.query.filter_by().all().limit(pageSize*(page-1),pageSize*page)
+        sort=Sort()
+        sku=Sku()
+        sorts_left = Sort.query.filter_by().all()
+        sorts_top = Sort.query.filter_by(sort.fatherSort==[sorts_left[0].sortId]).all()
+        skus=Sku.query.filter_by(sku.sort_id==sorts_top[0].sortId).all().limit(pageSize*(page-1),pageSize*page)
     # 将数据转换为字典
     sorts_left_list=[ sort_left.to_dict() for sort_left in sorts_left]
     sorts_top_list=[ sort_top.to_dict() for sort_top in sorts_top]
