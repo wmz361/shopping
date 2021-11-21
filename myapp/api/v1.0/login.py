@@ -9,7 +9,7 @@ from myapp.utils.response_code import RET
 
 ec=exceptionCatch()
 
-@apiBP.route('/register', methods=['POST'])
+@apiBP.route('/user', methods=['POST'])
 def register():
     """ 用户注册 """
     registerForm = RegisterForm().body_data()

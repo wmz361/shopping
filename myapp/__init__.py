@@ -3,6 +3,8 @@ from flask import Flask
 from flask_mail import Mail
 from flask_wtf import CSRFProtect
 import logging
+
+from myapp.api import apiBP
 from myapp.libs.redisDealwith import Redis
 from myapp.models.base import db
 from myapp.utils.commons import ReConverter
@@ -44,6 +46,7 @@ def create_app():
     app.register_blueprint(shoppingCartBP,url_prefix='/shopping')
     app.register_blueprint(testBP,url_prefix='/test')
     app.register_blueprint(html)
+    app.register_blueprint(apiBP)
 
     # redis_store=Redis._get_r()
 

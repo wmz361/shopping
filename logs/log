@@ -251,3 +251,182 @@ WARNING _internal.py:113  * Debugger is active!
 INFO _internal.py:113  * Debugger PIN: 121-635-827
 INFO _internal.py:113  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
 INFO _internal.py:113 127.0.0.1 - - [09/Nov/2021 13:54:51] "[37mGET /login/register HTTP/1.1[0m" 200 -
+INFO _internal.py:87  * Restarting with stat
+WARNING _internal.py:87  * Debugger is active!
+INFO _internal.py:87  * Debugger PIN: 297-910-492
+INFO _internal.py:87  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:87 127.0.0.1 - - [13/Nov/2021 10:45:57] "GET /register HTTP/1.1" 404 -
+INFO _internal.py:87 127.0.0.1 - - [13/Nov/2021 10:45:58] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py:87  * Restarting with stat
+WARNING _internal.py:87  * Debugger is active!
+INFO _internal.py:87  * Debugger PIN: 297-910-492
+INFO _internal.py:87  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:87 127.0.0.1 - - [13/Nov/2021 10:48:04] "GET /register HTTP/1.1" 404 -
+INFO _internal.py:87 127.0.0.1 - - [13/Nov/2021 10:48:05] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py:87  * Restarting with stat
+WARNING _internal.py:87  * Debugger is active!
+INFO _internal.py:87  * Debugger PIN: 297-910-492
+INFO _internal.py:87  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:87 127.0.0.1 - - [13/Nov/2021 10:56:02] "GET /register HTTP/1.1" 404 -
+INFO _internal.py:87 127.0.0.1 - - [13/Nov/2021 10:56:04] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [13/Nov/2021 10:56:04] "GET /register HTTP/1.1" 404 -
+INFO _internal.py:87 127.0.0.1 - - [13/Nov/2021 10:56:04] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py:87  * Restarting with stat
+WARNING _internal.py:87  * Debugger is active!
+INFO _internal.py:87  * Debugger PIN: 297-910-492
+INFO _internal.py:87  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:87 127.0.0.1 - - [13/Nov/2021 10:57:42] "GET /register HTTP/1.1" 404 -
+INFO _internal.py:87 127.0.0.1 - - [13/Nov/2021 10:57:43] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [13/Nov/2021 10:58:05] "GET /register HTTP/1.1" 404 -
+INFO _internal.py:87 127.0.0.1 - - [13/Nov/2021 10:58:05] "GET /favicon.ico HTTP/1.1" 200 -
+INFO _internal.py:87 127.0.0.1 - - [13/Nov/2021 10:58:12] "GET /register.html HTTP/1.1" 200 -
+INFO _internal.py:87  * Restarting with stat
+WARNING _internal.py:87  * Debugger is active!
+INFO _internal.py:87  * Debugger PIN: 297-910-492
+INFO _internal.py:87  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:87 127.0.0.1 - - [13/Nov/2021 11:09:21] "GET /index/indexLogined.html HTTP/1.1" 404 -
+INFO _internal.py:87 127.0.0.1 - - [13/Nov/2021 11:09:46] "GET /index/indexLogined HTTP/1.1" 404 -
+INFO _internal.py:87 127.0.0.1 - - [13/Nov/2021 11:09:53] "GET /index/indexLogined.html HTTP/1.1" 404 -
+INFO _internal.py:87 127.0.0.1 - - [13/Nov/2021 11:10:35] "GET /index/indexLogined.html HTTP/1.1" 404 -
+INFO _internal.py:87 127.0.0.1 - - [13/Nov/2021 11:10:35] "GET /favicon.ico HTTP/1.1" 404 -
+INFO _internal.py:87 127.0.0.1 - - [13/Nov/2021 11:10:37] "GET /index/indexLogined.html HTTP/1.1" 404 -
+INFO _internal.py:87 127.0.0.1 - - [13/Nov/2021 11:10:38] "GET /index/indexLogined.html HTTP/1.1" 404 -
+INFO _internal.py:87 127.0.0.1 - - [13/Nov/2021 11:10:40] "GET /index/indexLogined.html HTTP/1.1" 404 -
+INFO _internal.py:87 127.0.0.1 - - [13/Nov/2021 11:10:40] "GET /favicon.ico HTTP/1.1" 404 -
+INFO _internal.py:87  * Restarting with stat
+WARNING _internal.py:87  * Debugger is active!
+INFO _internal.py:87  * Debugger PIN: 297-910-492
+INFO _internal.py:87  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:87  * Restarting with stat
+WARNING _internal.py:87  * Debugger is active!
+INFO _internal.py:87  * Debugger PIN: 297-910-492
+INFO _internal.py:87  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:87 127.0.0.1 - - [13/Nov/2021 11:11:58] "GET /index/indexLogined.html HTTP/1.1" 404 -
+INFO _internal.py:87 127.0.0.1 - - [13/Nov/2021 11:12:00] "GET /index/indexLogined.html HTTP/1.1" 404 -
+INFO _internal.py:87  * Restarting with stat
+WARNING _internal.py:87  * Debugger is active!
+INFO _internal.py:87  * Debugger PIN: 297-910-492
+INFO _internal.py:87  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:87 127.0.0.1 - - [13/Nov/2021 11:13:03] "GET /index/indexLogined.html HTTP/1.1" 404 -
+INFO _internal.py:87  * Restarting with stat
+WARNING _internal.py:87  * Debugger is active!
+INFO _internal.py:87  * Debugger PIN: 297-910-492
+INFO _internal.py:87  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ERROR app.py:1420 Exception on /index/indexLogined.html [GET]
+Traceback (most recent call last):
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "E:\auto\shopping\myapp\web\web_html.py", line 33, in get_html
+    return render_template(html_file_name)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 127, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 110, in _render
+    rv = template.render(context)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "E:\auto\shopping\myapp\templates\index\indexLogined.html", line 1, in <module>
+    {% extends "base/logined.html" %}
+  File "E:\auto\shopping\myapp\templates\base\logined.html", line 16, in <module>
+    {% block more %}
+  File "E:\auto\shopping\myapp\templates\base\logined.html", line 17, in <module>
+    <a href="{{ url_for('merchantBP.Merchant')}}">ºó Ì¨</a>
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\helpers.py", line 312, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1641, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\helpers.py", line 304, in url_for
+    rv = url_adapter.build(endpoint, values, method=method,
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\werkzeug\routing.py", line 1768, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'merchantBP.Merchant'. Did you mean 'web_html.get_html' instead?
+INFO _internal.py:87 127.0.0.1 - - [13/Nov/2021 11:14:24] "GET /index/indexLogined.html HTTP/1.1" 500 -
+INFO _internal.py:87  * Restarting with stat
+WARNING _internal.py:87  * Debugger is active!
+INFO _internal.py:87  * Debugger PIN: 297-910-492
+INFO _internal.py:87  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ERROR app.py:1420 Exception on /index/indexLogined.html [GET]
+Traceback (most recent call last):
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "E:\auto\shopping\myapp\web\web_html.py", line 34, in get_html
+    return render_template(html_file_name)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 127, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 64, in get_source
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index/indexLogined.html.html
+INFO _internal.py:87 127.0.0.1 - - [13/Nov/2021 11:20:54] "GET /index/indexLogined.html HTTP/1.1" 500 -
+ERROR app.py:1420 Exception on /index/indexLogined [GET]
+Traceback (most recent call last):
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "E:\auto\shopping\myapp\web\web_html.py", line 34, in get_html
+    return render_template(html_file_name)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 127, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 110, in _render
+    rv = template.render(context)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "E:\auto\shopping\myapp\templates\index\indexLogined.html", line 1, in <module>
+    {% extends "base/logined.html" %}
+  File "E:\auto\shopping\myapp\templates\base\logined.html", line 34, in <module>
+    {% block  details %}
+  File "E:\auto\shopping\myapp\templates\index\indexLogined.html", line 30, in <module>
+    {% for good in goodssku['skus'] %}
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 411, in getitem
+    return obj[argument]
+jinja2.exceptions.UndefinedError: 'goodssku' is undefined
+INFO _internal.py:87 127.0.0.1 - - [13/Nov/2021 11:21:11] "GET /index/indexLogined HTTP/1.1" 500 -

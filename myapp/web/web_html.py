@@ -9,24 +9,26 @@ html = Blueprint("web_html",__name__)
 # 127.0.0.1:5000/register.html
 # 127.0.0.1:5000/favicon.ico   # 浏览器认为的网站标识， 浏览器会自己请求这个资源
 
-@html.route("/<re(r'.*'):html_file_name>")
-def get_html(html_file_name):
+@html.route("/<re(r'.*'):html_file_path>/<re(r'.*'):html_file_name>")
+def get_html(html_file_path,html_file_name):
     """提供html文件"""
     # 如果html_file_name为""， 表示访问的路径是/ ,请求的是主页
-    if not html_file_name:
-        html_file_name = "index.html"
+    html_file_name=html_file_name+'.html'
+    if not html_file_path and not html_file_name :
+        html_file_path = 'index'
+        html_file_name = "indexLogined.html"
 
     # 如果资源名不是favicon.ico
     if html_file_name != "favicon.ico":
-        html_file_name = "html/" + html_file_name
+        html_file_name = html_file_path+'/' + html_file_name
 
-    # 创建一个csrf_token值
-    csrf_token = csrf.generate_csrf()
+    # # 创建一个csrf_token值
+    # csrf_token = csrf.generate_csrf()
 
-    # flask提供的返回静态文件的方法
-    resp = make_response(current_app.send_static_file(html_file_name))
+    # # flask提供的返回静态文件的方法
+    # resp = make_response(current_app.send_static_file(html_file_name))
 
-    # 设置cookie值
-    resp.set_cookie("csrf_token", csrf_token)
+    # # 设置cookie值
+    # resp.set_cookie("csrf_token", csrf_token)
 
-    return resp
+    return render_template(html_file_name)
