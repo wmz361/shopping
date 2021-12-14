@@ -13,7 +13,7 @@ merchantBP = Blueprint("merchantBP",__name__)
 @merchantBP.route('/merchant',methods=['GET'])
 def Merchant(tab='brandManager',name='审核通过的品牌'):
     itemTypes,items,itemsAttributes=ConstantDataProcessing.toMethod(tab,name)
-    return render_template('admin/Merchant.html',itemTypes=itemTypes,items=items,itemsAttributes=itemsAttributes)
+    return render_template('admin/admin_merchant.html',itemTypes=itemTypes,items=items,itemsAttributes=itemsAttributes)
 
 @merchantBP.route('/add_brand', methods=['GET', 'POST'])
 def add_brand():

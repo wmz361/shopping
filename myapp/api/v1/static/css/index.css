@@ -1,0 +1,192 @@
+   * {
+            padding: 0;
+            margin: 0;
+           width:100%;
+           height:100%;
+        }
+
+.top1{
+             width: 100%;
+             height: 10%;
+             float:left;
+             background: rgb(228,223,215);
+       }
+
+    .top2{
+             width: 80%;
+             height: 10%;
+             float: right;
+             background: rgb(187,181,172);
+             text-align:right;
+       }
+       .brandsDicSecendLevel{
+            width: 8%;
+            height: 50%;
+            float:left;
+            font-size: 15px;
+            color: #DCDCDC;
+            font-weight:bold;
+            line-height:30px;}
+         .left{
+             width: 20%;
+             height: 89.5%;
+             float:left;
+             background: rgb(229,211,170);
+             border-radius: 0px 5px 0px 0px;
+
+        }
+         .right {
+            width: 80%;
+            height: 80%;
+            float:left;
+            background: rgb(228,223,215);
+             border-radius: 5px 0px 0px 5px;
+             overflow:hidden;
+        }
+         .goods {
+            width: 17%;
+            height: 35%;
+            float:left;
+            background: rgb(229,211,170);
+            border-radius: 10px 0px 0px 10px;
+            margin:10px;
+            overflow:auto;
+        }
+        .goodssku {
+            width: 100%;
+            height: 7%;
+            float:left;
+            background: rgb(229,211,170);
+            border-bottom:2px solid rgb(255,255,255);
+            font-size: 15px;
+            color: #DCDCDC;
+            line-height:50px;
+            font-weight:bold;
+        }
+
+         .three {
+            width: 30%;
+            height: 75%;
+            float:left;
+        }
+         .button {
+            background-color: rgb(187,181,172);
+            font-size: 15px;
+            border-radius: 6px;
+            border: 2px solid rgb(187,181,172);
+            width: 70px;
+	        height: 30px;
+            top:10px;
+            right: 30px;
+            margin: 8px 15px;
+            line-height:30px;
+             color: #333333;
+        }
+
+     .box{
+        width: 380px;
+        margin: 8px 30px;
+        font-size: 14px;
+
+        }
+        .input{
+        width: 260px;
+        border: 1px solid rgb(187,181,172);
+        height: 30px;
+        float: left;
+        background-image: url(images/search.jpg);
+        background-repeat: no-repeat;
+        background-size: 25px;
+        background-position:5px center;
+        padding:0 0 0 40px;
+        border-radius: 5px 0px 0px 5px;
+        }
+        .search{
+        width: 78px;
+        height: 32px;
+        float: right;
+        background: rgb(187,181,172);
+        color: white;
+        text-align: center;
+        line-height: 32px;
+        cursor: pointer;
+        border-radius: 0px 5px 5px 0px;
+        }
+        a{ text-decoration:none;  }
+        .text{
+            font-size: 15px;
+            font-weight: bold;
+            top:10px;
+            right: 30px;
+            margin: 8px 15px;
+            width: 200px;
+	        height: 30px;
+            line-height:31px;
+             color: #333333;
+        }
+
+        /* 下拉按钮样式 */
+.dropbtn {
+    background-color: rgb(229,211,170);
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* 容器 <div> - 需要定位下拉内容 */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    width: 70px;
+	height: 30px;
+}
+
+/* 下拉内容 (默认隐藏) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    left:10%;
+    top:10%;
+    /*background-color: #f9f9f9;*/
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+/* 下拉菜单的链接 */
+.dropdown-content a {
+    color: black;
+    padding: 8px 0px;
+    text-decoration: none;
+    display: block;
+}
+
+/* 鼠标移上去后修改下拉菜单链接颜色 */
+.dropdown-content a:hover {background-color: rgb(229,211,170)}
+
+/* 在鼠标移上去后显示下拉菜单 */
+.dropdown:hover .dropdown-content {
+    display: block;
+    left:-150%;
+    top:140%;
+}
+
+/* 当下拉内容显示后修改下拉按钮的背景颜色 */
+.dropdown:hover .button {
+    background-color:rgb(229,211,170);
+}
+
+.top2 .current{
+            background:rgb(229,211,170);
+            border:1px rgb(228,223,215)
+        }
+.left .current {
+            background: rgb(229, 211, 170);
+            border: 1px rgb(228, 223, 215)
+        }
+
+
+
+
+

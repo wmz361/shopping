@@ -10,8 +10,8 @@ from myapp.view_models.order import OrderViewModel
 
 ec=exceptionCatch()
 
-@apiBP.route('/getUserInf/status/<userID>', methods=['GET'])
-def getUserInf(status,userID,page=1,pageSize=20):
+@apiBP.route('/getOrderList/status/<userID>', methods=['GET'])
+def getOrderList(status,userID,page=1,pageSize=20):
     """ 获取订单列表 """
     # 获取数据库中数据
     with ec.dataBase_exception():
@@ -21,7 +21,7 @@ def getUserInf(status,userID,page=1,pageSize=20):
     orderInf_list = [OrderViewModel(order) for order in orders]
     return jsonify(errno=RET.OK, errmsg="OK", data={'data': orderInf_list})
 
-@apiBP.route('/placeOrder', methods=['POST'])
+@apiBP.route('/addToTheCart', methods=['POST'])
 def addToTheCart():
     """ 加入购物车 """
     request_data=request.get_json()
@@ -42,8 +42,8 @@ def placeOrder():
                     db.session.add(order)
         return jsonify(errno=RET.OK, errmsg="OK", data={'order': order.orderId,'spu':spuFirst})
 
-@apiBP.route('/placeOrder', methods=['POST'])
-def placeOrder():
+@apiBP.route('/payment', methods=['POST'])
+def payment():
     """ 付款 """
     request_data = request.get_json()
     with ec.dataBase_exception():
@@ -53,8 +53,8 @@ def placeOrder():
         else:
             return jsonify(errno=RET.PARAMERR, errmsg="付款失败", data={'orderId':Order.orderId})
 
-@apiBP.route('/placeOrder', methods=['POST'])
-def placeOrder():
+@apiBP.route('/ship', methods=['POST'])
+def ship():
     """ 发货 """
     request_data = request.get_json()
     with ec.dataBase_exception():
@@ -64,8 +64,8 @@ def placeOrder():
         else:
             return jsonify(errno=RET.PARAMERR, errmsg="付款失败", data={'orderId': Order.orderId})
 
-@apiBP.route('/placeOrder', methods=['POST'])
-def placeOrder():
+@apiBP.route('/receipt', methods=['POST'])
+def receipt():
     """ 收货 """
     request_data = request.get_json()
     with ec.dataBase_exception():
@@ -75,8 +75,8 @@ def placeOrder():
         else:
             return jsonify(errno=RET.PARAMERR, errmsg="付款失败", data={'orderId': Order.orderId})
 
-@apiBP.route('/placeOrder', methods=['POST'])
-def placeOrder():
+@apiBP.route('/returnTheGoods', methods=['POST'])
+def returnTheGoods():
     """ 退货 """
     request_data = request.get_json()
     with ec.dataBase_exception():
@@ -86,8 +86,8 @@ def placeOrder():
         else:
             return jsonify(errno=RET.PARAMERR, errmsg="付款失败", data={'orderId': Order.orderId})
 
-@apiBP.route('/placeOrder', methods=['POST'])
-def placeOrder():
+@apiBP.route('/evaluation', methods=['POST'])
+def evaluation():
     """ 评价 """
     request_data = request.get_json()
     with ec.dataBase_exception():

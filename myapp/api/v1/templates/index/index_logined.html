@@ -1,0 +1,64 @@
+{% extends "base/logined.html" %}
+
+{% block title %}
+    <title>首页</title>
+    <link rel="stylesheet" type="text/css" href="../../../../../static/css/index.css">
+<!--    <script type="text/javascript" src="../../../../../static/js/index.js"></script>-->
+    <script  type="text/javascript">
+        $(document).ready(function(){
+            var searchKey = $(".input").val();
+            if (undefined == searchKey) searchKey = "";
+            var params = {
+                searchKey:searchKey
+            };
+            //ajax 提交数据
+            $.ajax({
+                type: "GET",
+                dataType: "json",
+                url: url_for('apiBP.index')
+                data: {'searchKey':searchKey},
+                success: function (result) {
+                    $(".right").html(template("index/index_logined.html", {datas:result.data.datas}));
+                },
+                error: function (result) {
+                    $(".right").html("获取数据失败！");
+                }
+            })
+        }
+    </script>
+{% endblock %}
+{% block  details %}
+<div class="top2">
+    {% for sort in datas.sorts_left_list %}
+           <div class="brandsDicSecendLevel" align="center">
+              <a href="#" style="color: #333333;">{{ sort['sort_name'] }}</a>
+            </div>
+     {% endfor %}
+</div>
+<div class="left">
+    {% for sort in datas.sorts_top_list %}
+           <div class="goodssku" align="center">
+              <a href="#" style="color: #333333;">{{ sort['sort_name'] }}</a>
+            </div>
+     {% endfor %}
+</div>
+<div class="right">
+    <div style="height:13%;width:100%">
+         <a class="button" align="center" style="float:left"  onclick="">推 荐</a>
+        <a class="button" align="center" style="float:left"  onclick="">销 量</a>
+        <a class="button" align="center" style="float:left" onclick=""> 最 新</a>
+    </div>
+    <div style="height:80%;width:100%;overflow:auto;">
+    {% for sku in datas.sku_list %}
+           <div class="goods" style="border:10px solid rgb(228,223,215);">
+               <img src="../../static/image/清明上河图.png" style="height: 70%"/>
+              <a href="#" style="color: #333333;">商品名称：{{ sku['sku_name'] }}</a><br>
+              <a href="#" style="color: #333333;">商品简介：{{ sku['introduction'] }}</a>
+            </div>
+        {% endfor %}
+    </div>
+    <div style="height:7%;width:100%;float:right">
+        <a class="total"> 共 {{ sku.total }} 条记录</a>
+    </div>
+</div>
+{% endblock %}

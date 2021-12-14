@@ -12,7 +12,7 @@ from myapp.view_models.sku import SkuViewModel
 
 ec=exceptionCatch()
 
-@apiBP.route('/index',method=['GET'])
+@apiBP.route('/index',methods=['GET'])
 def index(page=1,pageSize=20):
     ''' 根据销量排序 '''
     # 获取数据库中数据
@@ -28,7 +28,7 @@ def index(page=1,pageSize=20):
     sku_list = [SkuViewModel(sku) for sku in skus]
     return jsonify(errno=RET.OK, errmsg="OK", data={'sorts_left_list':sorts_left_list,'sorts_top_list':sorts_top_list,'sku_list':sku_list})
 
-@apiBP.route('/sortingByRecommend',method=['GET'])
+@apiBP.route('/sortingByRecommend',methods=['GET'])
 def sortingByRecommend(page=1,pageSize=20):
     ''' 根据销量排序 '''
     # 获取数据库中数据
@@ -40,7 +40,7 @@ def sortingByRecommend(page=1,pageSize=20):
     return jsonify(errno=RET.OK, errmsg="OK", data={'data':sku_list})
 
 
-@apiBP.route('/sortingByCreateTime',method=['GET'])
+@apiBP.route('/sortingByCreateTime',methods=['GET'])
 def sortingByCreateTime(page=1,pageSize=20):
     ''' 根据创建时间倒序排序 '''
     # 获取数据库中数据
@@ -52,7 +52,7 @@ def sortingByCreateTime(page=1,pageSize=20):
     return jsonify(errno=RET.OK, errmsg="OK", data={'data':sku_list})
 
 
-@apiBP.route('/sortingByKeyWord',method=['GET'])
+@apiBP.route('/sortingByKeyWord',methods=['GET'])
 def sortingByKeyWord(page=1,pageSize=20):
     ''' 根据关键字查询 '''
     request_data=request.get_json()

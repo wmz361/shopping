@@ -7,5 +7,5 @@ from myapp.view_models.spu import SpuViewModel
 goodsBP = Blueprint("goodsBP",__name__)
 @goodsBP.route('/goodDetail',methods=['GET'])
 def index():
-    return render_template('goods/goodsLogined.html')
+    return render_template('goods/goods_logined.html')
 

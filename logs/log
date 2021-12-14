@@ -430,3 +430,905 @@ Traceback (most recent call last):
     return obj[argument]
 jinja2.exceptions.UndefinedError: 'goodssku' is undefined
 INFO _internal.py:87 127.0.0.1 - - [13/Nov/2021 11:21:11] "GET /index/indexLogined HTTP/1.1" 500 -
+INFO _internal.py:87  * Restarting with stat
+WARNING _internal.py:87  * Debugger is active!
+INFO _internal.py:87  * Debugger PIN: 206-160-673
+INFO _internal.py:87  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:87 127.0.0.1 - - [21/Nov/2021 10:28:39] "GET / HTTP/1.1" 404 -
+INFO _internal.py:87 127.0.0.1 - - [21/Nov/2021 10:28:39] "GET /favicon.ico HTTP/1.1" 404 -
+INFO _internal.py:87  * Restarting with stat
+WARNING _internal.py:87  * Debugger is active!
+INFO _internal.py:87  * Debugger PIN: 206-160-673
+INFO _internal.py:87  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:87 127.0.0.1 - - [21/Nov/2021 10:43:29] "GET / HTTP/1.1" 404 -
+INFO _internal.py:87  * Restarting with stat
+WARNING _internal.py:87  * Debugger is active!
+INFO _internal.py:87  * Debugger PIN: 206-160-673
+INFO _internal.py:87  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:87 127.0.0.1 - - [21/Nov/2021 10:44:30] "GET / HTTP/1.1" 404 -
+INFO _internal.py:87  * Restarting with stat
+WARNING _internal.py:87  * Debugger is active!
+INFO _internal.py:87  * Debugger PIN: 206-160-673
+INFO _internal.py:87  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:87 127.0.0.1 - - [21/Nov/2021 10:45:03] "GET / HTTP/1.1" 404 -
+INFO _internal.py:87 127.0.0.1 - - [21/Nov/2021 10:45:52] "GET /0.0 HTTP/1.1" 404 -
+INFO _internal.py:87  * Restarting with stat
+WARNING _internal.py:87  * Debugger is active!
+INFO _internal.py:87  * Debugger PIN: 206-160-673
+INFO _internal.py:87  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ERROR app.py:1420 Exception on /index_logined [GET]
+Traceback (most recent call last):
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "E:\auto\shopping\myapp\web_html.py", line 23, in get_html
+    html_file_name = html_file_path+'/' + html_file_name
+TypeError: can only concatenate list (not "str") to list
+INFO _internal.py:87 127.0.0.1 - - [21/Nov/2021 11:01:22] "GET /index_logined HTTP/1.1" 500 -
+INFO _internal.py:87  * Restarting with stat
+WARNING _internal.py:87  * Debugger is active!
+INFO _internal.py:87  * Debugger PIN: 206-160-673
+INFO _internal.py:87  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ERROR app.py:1420 Exception on /index_logined [GET]
+Traceback (most recent call last):
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "E:\auto\shopping\myapp\web_html.py", line 34, in get_html
+    return render_template(html_file_name)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 127, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 110, in _render
+    rv = template.render(context)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "E:\auto\shopping\myapp\templates\index\index_logined.html", line 1, in <module>
+    {% extends "base/logined.html" %}
+  File "E:\auto\shopping\myapp\templates\base\logined.html", line 34, in <module>
+    {% block  details %}
+  File "E:\auto\shopping\myapp\templates\index\index_logined.html", line 30, in <module>
+    {% for good in goodssku['skus'] %}
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 411, in getitem
+    return obj[argument]
+jinja2.exceptions.UndefinedError: 'goodssku' is undefined
+INFO _internal.py:87 127.0.0.1 - - [21/Nov/2021 11:02:03] "GET /index_logined HTTP/1.1" 500 -
+ERROR app.py:1420 Exception on /index_logined [GET]
+Traceback (most recent call last):
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "E:\auto\shopping\myapp\web_html.py", line 34, in get_html
+    return render_template(html_file_name)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 127, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 110, in _render
+    rv = template.render(context)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "E:\auto\shopping\myapp\templates\index\index_logined.html", line 1, in <module>
+    {% extends "base/logined.html" %}
+  File "E:\auto\shopping\myapp\templates\base\logined.html", line 34, in <module>
+    {% block  details %}
+  File "E:\auto\shopping\myapp\templates\index\index_logined.html", line 30, in <module>
+    {% for good in goodssku['skus'] %}
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 411, in getitem
+    return obj[argument]
+jinja2.exceptions.UndefinedError: 'goodssku' is undefined
+INFO _internal.py:87 127.0.0.1 - - [21/Nov/2021 11:02:05] "GET /index_logined HTTP/1.1" 500 -
+ERROR app.py:1420 Exception on /index_logined [GET]
+Traceback (most recent call last):
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "E:\auto\shopping\myapp\web_html.py", line 34, in get_html
+    return render_template(html_file_name)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 127, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 110, in _render
+    rv = template.render(context)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "E:\auto\shopping\myapp\templates\index\index_logined.html", line 1, in <module>
+    {% extends "base/logined.html" %}
+  File "E:\auto\shopping\myapp\templates\base\logined.html", line 34, in <module>
+    {% block  details %}
+  File "E:\auto\shopping\myapp\templates\index\index_logined.html", line 30, in <module>
+    {% for good in goodssku['skus'] %}
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 411, in getitem
+    return obj[argument]
+jinja2.exceptions.UndefinedError: 'goodssku' is undefined
+INFO _internal.py:87 127.0.0.1 - - [21/Nov/2021 11:02:09] "GET /index_logined HTTP/1.1" 500 -
+INFO _internal.py:87  * Restarting with stat
+WARNING _internal.py:87  * Debugger is active!
+INFO _internal.py:87  * Debugger PIN: 206-160-673
+INFO _internal.py:87  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:87  * Restarting with stat
+WARNING _internal.py:87  * Debugger is active!
+INFO _internal.py:87  * Debugger PIN: 206-160-673
+INFO _internal.py:87  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py:87  * Restarting with stat
+WARNING _internal.py:87  * Debugger is active!
+INFO _internal.py:87  * Debugger PIN: 206-160-673
+INFO _internal.py:87  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ERROR app.py:1420 Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "E:\auto\shopping\myapp\api\v1\web_html.py", line 34, in get_html
+    return render_template(html_file_name)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 127, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 64, in get_source
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: .html/.html
+INFO _internal.py:87 127.0.0.1 - - [21/Nov/2021 14:36:16] "GET / HTTP/1.1" 500 -
+INFO _internal.py:87  * Restarting with stat
+WARNING _internal.py:87  * Debugger is active!
+INFO _internal.py:87  * Debugger PIN: 206-160-673
+INFO _internal.py:87  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ERROR app.py:1420 Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "E:\auto\shopping\myapp\api\v1\web_html.py", line 33, in get_html
+    return render_template(html_file_name)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 127, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 64, in get_source
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index/index/index/index_logined.html.html
+INFO _internal.py:87 127.0.0.1 - - [21/Nov/2021 14:37:44] "GET / HTTP/1.1" 500 -
+INFO _internal.py:87  * Restarting with stat
+WARNING _internal.py:87  * Debugger is active!
+INFO _internal.py:87  * Debugger PIN: 206-160-673
+INFO _internal.py:87  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ERROR app.py:1420 Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "E:\auto\shopping\myapp\api\v1\web_html.py", line 33, in get_html
+    return render_template(html_file_name)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 127, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 64, in get_source
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index/index/index/index_logined.html.html
+INFO _internal.py:87 127.0.0.1 - - [21/Nov/2021 14:38:55] "GET / HTTP/1.1" 500 -
+INFO _internal.py:87  * Restarting with stat
+WARNING _internal.py:87  * Debugger is active!
+INFO _internal.py:87  * Debugger PIN: 206-160-673
+INFO _internal.py:87  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ERROR app.py:1420 Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "E:\auto\shopping\myapp\api\v1\web_html.py", line 32, in get_html
+    return render_template(html_file_name)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 127, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 64, in get_source
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index/index_logined.html
+INFO _internal.py:87 127.0.0.1 - - [21/Nov/2021 14:39:59] "GET / HTTP/1.1" 500 -
+INFO _internal.py:87  * Restarting with stat
+WARNING _internal.py:87  * Debugger is active!
+INFO _internal.py:87  * Debugger PIN: 206-160-673
+INFO _internal.py:87  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ERROR app.py:1420 Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "E:\auto\shopping\myapp\api\v1\web_html.py", line 32, in get_html
+    return render_template(html_file_name)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 127, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 110, in _render
+    rv = template.render(context)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "E:\auto\shopping\myapp\api\v1/templates\index\index_logined.html", line 1, in <module>
+    {% extends "base/logined.html" %}
+  File "E:\auto\shopping\myapp\api\v1/templates\base\logined.html", line 16, in <module>
+    {% block more %}
+  File "E:\auto\shopping\myapp\api\v1/templates\base\logined.html", line 17, in <module>
+    <a href="{{ url_for('merchantBP.Merchant')}}">后 台</a>
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\helpers.py", line 312, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1641, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\helpers.py", line 304, in url_for
+    rv = url_adapter.build(endpoint, values, method=method,
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\werkzeug\routing.py", line 1768, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'merchantBP.Merchant'. Did you mean 'apiBP.payment' instead?
+INFO _internal.py:87 127.0.0.1 - - [21/Nov/2021 14:41:11] "GET / HTTP/1.1" 500 -
+INFO _internal.py:87  * Restarting with stat
+WARNING _internal.py:87  * Debugger is active!
+INFO _internal.py:87  * Debugger PIN: 206-160-673
+INFO _internal.py:87  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ERROR app.py:1420 Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "E:\auto\shopping\myapp\api\v1\web_html.py", line 32, in get_html
+    return render_template(html_file_name)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 127, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 110, in _render
+    rv = template.render(context)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "E:\auto\shopping\myapp\api\v1/templates\index\index_logined.html", line 1, in <module>
+    {% extends "base/logined.html" %}
+  File "E:\auto\shopping\myapp\api\v1/templates\base\logined.html", line 16, in <module>
+    {% block more %}
+  File "E:\auto\shopping\myapp\api\v1/templates\base\logined.html", line 17, in <module>
+    <a href="{{ url_for('apiBP.getUserInf')}}">后 台</a>
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\helpers.py", line 312, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1641, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\helpers.py", line 304, in url_for
+    rv = url_adapter.build(endpoint, values, method=method,
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\werkzeug\routing.py", line 1768, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'apiBP.getUserInf'. Did you forget to specify values ['userID']?
+INFO _internal.py:87 127.0.0.1 - - [21/Nov/2021 14:43:53] "GET / HTTP/1.1" 500 -
+INFO _internal.py:87  * Restarting with stat
+WARNING _internal.py:87  * Debugger is active!
+INFO _internal.py:87  * Debugger PIN: 206-160-673
+INFO _internal.py:87  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ERROR app.py:1420 Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "E:\auto\shopping\myapp\api\v1\web_html.py", line 32, in get_html
+    return render_template(html_file_name)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 127, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 110, in _render
+    rv = template.render(context)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "E:\auto\shopping\myapp\api\v1/templates\base\logined.html", line 17, in <module>
+    <a href="{{ url_for('apiBP.getUserInf'),userId='111'}}">后 台</a>
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 1005, in render
+    return concat(self.root_render_func(self.new_context(vars)))
+  File "E:\auto\shopping\myapp\api\v1/templates\index\index_logined.html", line 1, in <module>
+    {% extends "base/logined.html" %}
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "E:\auto\shopping\myapp\api\v1/templates\base\logined.html", line 17, in <module>
+    <a href="{{ url_for('apiBP.getUserInf'),userId='111'}}">后 台</a>
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 497, in _parse
+    return Parser(self, source, name, encode_filename(filename)).parse()
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\parser.py", line 896, in parse
+    result = nodes.Template(self.subparse(), lineno=1)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\parser.py", line 878, in subparse
+    rv = self.parse_statement()
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\parser.py", line 130, in parse_statement
+    return getattr(self, 'parse_' + self.stream.current.value)()
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\parser.py", line 268, in parse_block
+    node.body = self.parse_statements(('name:endblock',), drop_needle=True)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\parser.py", line 165, in parse_statements
+    result = self.subparse(end_tokens)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\parser.py", line 871, in subparse
+    self.stream.expect('variable_end')
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\lexer.py", line 383, in expect
+    raise TemplateSyntaxError("expected token %r, got %r" %
+jinja2.exceptions.TemplateSyntaxError: expected token 'end of print statement', got '='
+INFO _internal.py:87 127.0.0.1 - - [21/Nov/2021 14:46:04] "GET / HTTP/1.1" 500 -
+INFO _internal.py:87  * Restarting with stat
+WARNING _internal.py:87  * Debugger is active!
+INFO _internal.py:87  * Debugger PIN: 206-160-673
+INFO _internal.py:87  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ERROR app.py:1420 Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "E:\auto\shopping\myapp\api\v1\web_html.py", line 32, in get_html
+    return render_template(html_file_name)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 127, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 110, in _render
+    rv = template.render(context)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "E:\auto\shopping\myapp\api\v1/templates\base\logined.html", line 17, in <module>
+    <a href="{{ url_for('apiBP.getUserInf'),userID='111'}}">后 台</a>
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 1005, in render
+    return concat(self.root_render_func(self.new_context(vars)))
+  File "E:\auto\shopping\myapp\api\v1/templates\index\index_logined.html", line 1, in <module>
+    {% extends "base/logined.html" %}
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "E:\auto\shopping\myapp\api\v1/templates\base\logined.html", line 17, in <module>
+    <a href="{{ url_for('apiBP.getUserInf'),userID='111'}}">后 台</a>
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 497, in _parse
+    return Parser(self, source, name, encode_filename(filename)).parse()
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\parser.py", line 896, in parse
+    result = nodes.Template(self.subparse(), lineno=1)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\parser.py", line 878, in subparse
+    rv = self.parse_statement()
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\parser.py", line 130, in parse_statement
+    return getattr(self, 'parse_' + self.stream.current.value)()
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\parser.py", line 268, in parse_block
+    node.body = self.parse_statements(('name:endblock',), drop_needle=True)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\parser.py", line 165, in parse_statements
+    result = self.subparse(end_tokens)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\parser.py", line 871, in subparse
+    self.stream.expect('variable_end')
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\lexer.py", line 383, in expect
+    raise TemplateSyntaxError("expected token %r, got %r" %
+jinja2.exceptions.TemplateSyntaxError: expected token 'end of print statement', got '='
+INFO _internal.py:87 127.0.0.1 - - [21/Nov/2021 14:47:06] "GET / HTTP/1.1" 500 -
+INFO _internal.py:87  * Restarting with stat
+WARNING _internal.py:87  * Debugger is active!
+INFO _internal.py:87  * Debugger PIN: 206-160-673
+INFO _internal.py:87  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ERROR app.py:1420 Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "E:\auto\shopping\myapp\api\v1\web_html.py", line 32, in get_html
+    return render_template(html_file_name)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 127, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 110, in _render
+    rv = template.render(context)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "E:\auto\shopping\myapp\api\v1/templates\index\index_logined.html", line 1, in <module>
+    {% extends "base/logined.html" %}
+  File "E:\auto\shopping\myapp\api\v1/templates\base\logined.html", line 34, in <module>
+    {% block  details %}
+  File "E:\auto\shopping\myapp\api\v1/templates\index\index_logined.html", line 11, in <module>
+    {% for sort in datas.sorts_left_list %}
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 430, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'datas' is undefined
+INFO _internal.py:87 127.0.0.1 - - [21/Nov/2021 14:48:47] "GET / HTTP/1.1" 500 -
+INFO _internal.py:87  * Restarting with stat
+WARNING _internal.py:87  * Debugger is active!
+INFO _internal.py:87  * Debugger PIN: 206-160-673
+INFO _internal.py:87  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ERROR app.py:1420 Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "E:\auto\shopping\myapp\api\v1\web_html.py", line 32, in get_html
+    return render_template(html_file_name)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 127, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 110, in _render
+    rv = template.render(context)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "E:\auto\shopping\myapp\api\v1/templates\index\index_logined.html", line 1, in <module>
+    {% extends "base/logined.html" %}
+  File "E:\auto\shopping\myapp\api\v1/templates\base\logined.html", line 34, in <module>
+    {% block  details %}
+  File "E:\auto\shopping\myapp\api\v1/templates\index\index_logined.html", line 11, in <module>
+    {% for sort in datas.sorts_left_list %}
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 430, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'datas' is undefined
+INFO _internal.py:87 127.0.0.1 - - [21/Nov/2021 14:55:47] "GET / HTTP/1.1" 500 -
+INFO _internal.py:87  * Restarting with stat
+WARNING _internal.py:87  * Debugger is active!
+INFO _internal.py:87  * Debugger PIN: 206-160-673
+INFO _internal.py:87  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ERROR app.py:1420 Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "E:\auto\shopping\myapp\api\v1\web_html.py", line 32, in get_html
+    return render_template(html_file_name)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 127, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 110, in _render
+    rv = template.render(context)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "E:\auto\shopping\myapp\api\v1/templates\index\index_logined.html", line 1, in <module>
+    {% extends "base/logined.html" %}
+  File "E:\auto\shopping\myapp\api\v1/templates\base\logined.html", line 34, in <module>
+    {% block  details %}
+  File "E:\auto\shopping\myapp\api\v1/templates\index\index_logined.html", line 32, in <module>
+    {% for sort in datas.sorts_left_list %}
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 430, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'datas' is undefined
+INFO _internal.py:87 127.0.0.1 - - [21/Nov/2021 14:58:37] "GET / HTTP/1.1" 500 -
+INFO _internal.py:87  * Restarting with stat
+WARNING _internal.py:87  * Debugger is active!
+INFO _internal.py:87  * Debugger PIN: 206-160-673
+INFO _internal.py:87  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ERROR app.py:1420 Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "E:\auto\shopping\myapp\api\v1\web_html.py", line 32, in get_html
+    return render_template(html_file_name)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 127, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 110, in _render
+    rv = template.render(context)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "E:\auto\shopping\myapp\api\v1/templates\index\index_logined.html", line 1, in <module>
+    {% extends "base/logined.html" %}
+  File "E:\auto\shopping\myapp\api\v1/templates\base\logined.html", line 34, in <module>
+    {% block  details %}
+  File "E:\auto\shopping\myapp\api\v1/templates\index\index_logined.html", line 32, in <module>
+    {% for sort in datas.sorts_left_list %}
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 430, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'datas' is undefined
+INFO _internal.py:87 127.0.0.1 - - [21/Nov/2021 15:01:25] "GET / HTTP/1.1" 500 -
+INFO _internal.py:87  * Restarting with stat
+WARNING _internal.py:87  * Debugger is active!
+INFO _internal.py:87  * Debugger PIN: 206-160-673
+INFO _internal.py:87  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ERROR app.py:1420 Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "E:\auto\shopping\myapp\api\v1\web_html.py", line 32, in get_html
+    return render_template(html_file_name)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 127, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 110, in _render
+    rv = template.render(context)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "E:\auto\shopping\myapp\api\v1/templates\index\index_logined.html", line 1, in <module>
+    {% extends "base/logined.html" %}
+  File "E:\auto\shopping\myapp\api\v1/templates\base\logined.html", line 34, in <module>
+    {% block  details %}
+  File "E:\auto\shopping\myapp\api\v1/templates\index\index_logined.html", line 32, in <module>
+    {% for sort in datas.sorts_left_list %}
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 430, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'datas' is undefined
+INFO _internal.py:87 127.0.0.1 - - [01/Dec/2021 19:24:06] "GET / HTTP/1.1" 500 -
+ERROR app.py:1420 Exception on /favicon.ico [GET]
+Traceback (most recent call last):
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "E:\auto\shopping\myapp\api\v1\web_html.py", line 32, in get_html
+    return render_template(html_file_name)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 127, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 64, in get_source
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: favicon.ico
+INFO _internal.py:87 127.0.0.1 - - [01/Dec/2021 19:24:06] "GET /favicon.ico HTTP/1.1" 500 -
+INFO _internal.py:87  * Restarting with stat
+WARNING _internal.py:87  * Debugger is active!
+INFO _internal.py:87  * Debugger PIN: 206-160-673
+INFO _internal.py:87  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ERROR app.py:1420 Exception on /test001 [GET]
+Traceback (most recent call last):
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "E:\auto\shopping\myapp\api\v1\web_html.py", line 32, in get_html
+    return render_template(html_file_name)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 127, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 64, in get_source
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: test001/test001.html
+INFO _internal.py:87 127.0.0.1 - - [01/Dec/2021 19:27:40] "GET /test001 HTTP/1.1" 500 -
+ERROR app.py:1420 Exception on /favicon.ico [GET]
+Traceback (most recent call last):
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "E:\auto\shopping\myapp\api\v1\web_html.py", line 32, in get_html
+    return render_template(html_file_name)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 127, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 64, in get_source
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: favicon.ico
+INFO _internal.py:87 127.0.0.1 - - [01/Dec/2021 19:27:40] "GET /favicon.ico HTTP/1.1" 500 -
+INFO _internal.py:87  * Restarting with stat
+WARNING _internal.py:87  * Debugger is active!
+INFO _internal.py:87  * Debugger PIN: 206-160-673
+INFO _internal.py:87  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ERROR app.py:1420 Exception on /test001 [GET]
+Traceback (most recent call last):
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "E:\auto\shopping\myapp\api\v1\web_html.py", line 32, in get_html
+    return render_template(html_file_name)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 127, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 64, in get_source
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: test001/test001.html
+INFO _internal.py:87 127.0.0.1 - - [01/Dec/2021 19:31:09] "GET /test001 HTTP/1.1" 500 -
+ERROR app.py:1420 Exception on /favicon.ico [GET]
+Traceback (most recent call last):
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "E:\auto\shopping\myapp\api\v1\web_html.py", line 32, in get_html
+    return render_template(html_file_name)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 127, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\jinja2\loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "C:\Users\wmz\AppData\Local\Programs\Python\Python39\lib\site-packages\flask\templating.py", line 64, in get_source
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: favicon.ico
+INFO _internal.py:87 127.0.0.1 - - [01/Dec/2021 19:31:09] "GET /favicon.ico HTTP/1.1" 500 -
+INFO _internal.py:87  * Restarting with stat
+WARNING _internal.py:87  * Debugger is active!
+INFO _internal.py:87  * Debugger PIN: 206-160-673
+INFO _internal.py:87  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)

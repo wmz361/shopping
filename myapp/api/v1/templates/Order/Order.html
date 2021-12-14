@@ -1,0 +1,25 @@
+{% extends "base/logined.html" %}
+{% block title %}
+    <title>购物车</title>
+    <link rel="stylesheet" type="text/css" href="../../static/css/Order.css">
+    <script type="text/javascript" src="../../static/js/Order.js"></script>
+{% endblock %}
+{% block  shoppingCart %}
+ <a class="button" align="center" style="float:right" href="{{ url_for('indexBP.indexLogin')}}"> 首页</a>
+{% endblock %}
+{% block  details %}
+<div class="left">
+    {% for leftTab in ['待收货','待发货','待评价','已收货','全部'] %}
+            <div class="leftTab" align="center" >
+                <a href="#" style="color: #333333;" > {{leftTab}} </a>
+            </div>
+    {% endfor %}
+</div>
+<div class="right">
+     {% for good in goods %}
+           <div class="goodssku" align="center">
+              <a href="#" style="color: #333333;">{{ good['name'] }}</a>
+            </div>
+     {% endfor %}
+</div>
+{% endblock %}

@@ -3,20 +3,18 @@ from flask import Flask
 from flask_mail import Mail
 from flask_wtf import CSRFProtect
 import logging
-
 from myapp.api import apiBP
 from myapp.libs.redisDealwith import Redis
 from myapp.models.base import db
 from myapp.utils.commons import ReConverter
-from myapp.web.Merchant import merchantBP
-from myapp.web.goods import goodsBP
-from myapp.web.index import indexBP
-from myapp.web.login import loginBP
-from myapp.web.shoppingCart import shoppingCartBP
-from myapp.web.test001 import testBP
-from myapp.web.userCenter import userCenterBP
-from myapp.web.web_html import html
-
+# from myapp.web.Merchant import merchantBP
+# from myapp.web.goods import goodsBP
+# from myapp.web.index import indexBP
+# from myapp.web.login import loginBP
+# from myapp.web.shoppingCart import shoppingCartBP
+# from myapp.web.test001 import testBP
+# from myapp.web.userCenter import userCenterBP
+from myapp.api.v1.web_html import htmlBP
 mail=Mail()
 
 # 配置日志信息
@@ -38,14 +36,14 @@ def create_app():
     app.url_map.converters['re']=ReConverter
     app.config.from_object('myapp.config.secure')
     app.config.from_object('myapp.config.setting')
-    app.register_blueprint(indexBP,url_prefix='/index')
-    app.register_blueprint(loginBP,url_prefix='/login')
-    app.register_blueprint(merchantBP,url_prefix='/merchant')
-    app.register_blueprint(goodsBP,url_prefix='/goods')
-    app.register_blueprint(userCenterBP,url_prefix='/userCenter')
-    app.register_blueprint(shoppingCartBP,url_prefix='/shopping')
-    app.register_blueprint(testBP,url_prefix='/test')
-    app.register_blueprint(html)
+    # app.register_blueprint(indexBP,url_prefix='/index')
+    # app.register_blueprint(loginBP,url_prefix='/login')
+    # app.register_blueprint(merchantBP,url_prefix='/merchant')
+    # app.register_blueprint(goodsBP,url_prefix='/goods')
+    # app.register_blueprint(userCenterBP,url_prefix='/userCenter')
+    # app.register_blueprint(shoppingCartBP,url_prefix='/shopping')
+    # app.register_blueprint(testBP,url_prefix='/test')
+    app.register_blueprint(htmlBP)
     app.register_blueprint(apiBP)
 
     # redis_store=Redis._get_r()

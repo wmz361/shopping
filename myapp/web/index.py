@@ -30,7 +30,7 @@ def indexLogin():
     brandsDicSecendLevel = BrandViewModel.brand_collection(brandsS)
     sku=Sku.query.filter(Sku.brandid==13).all()
     goodskuDic=SkuViewModel.sku_collection(sku)
-    return render_template('index/indexLogined.html',username=uname,brandsDicFirstLevel=brandsDicFirstLevel['brands'],goodssku=goodskuDic
+    return render_template('index/index_logined.html',username=uname,brandsDicFirstLevel=brandsDicFirstLevel['brands'],goodssku=goodskuDic
                            ,brandsDicSecendLevel=brandsDicSecendLevel['brands'])
 
 @indexBP.route('/search', methods=['GET'])
@@ -40,4 +40,4 @@ def search(keywords):
     brandsDic = BrandViewModel.brand_collection(brands)
     sku = Sku.query.filter(or_(Sku.skuname== keywords, Sku.skuid== keywords)).all()
     goodskuDic = SkuViewModel.sku_collection(sku)
-    return render_template('index/indexLogined.html', username=uname, brands=brandsDic, goodssku=goodskuDic)
+    return render_template('index/index_logined.html', username=uname, brands=brandsDic, goodssku=goodskuDic)

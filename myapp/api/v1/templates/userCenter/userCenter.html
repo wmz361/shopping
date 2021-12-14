@@ -1,0 +1,26 @@
+{% extends "base/logined.html" %}
+{% block title %}
+    <title>用户中心</title>
+    <link rel="stylesheet" type="text/css" href="../../static/css/userCenter.css">
+    <script type="text/javascript" src="../../static/js/userCenter.js"></script>
+{% endblock %}
+{% block more %}
+<a href="{{ url_for('merchantBP.Merchant')}}">后 台</a>
+<a href="{{ url_for('indexBP.index')}}">首 页</a>
+{% endblock %}
+{% block  details %}
+<div class="left">
+    {% for leftTab in ['用户中心','地址管理','支付中心','我的收藏'] %}
+            <div class="leftTab" align="center" >
+                <a href="#" style="color: #333333;" > {{leftTab}} </a>
+            </div>
+    {% endfor %}
+</div>
+<div class="right">
+    {% for address in addresses %}
+           <div class="address" align="center">
+              <a href="#" style="color: #333333;">{{ address['name'] }}</a>
+            </div>
+     {% endfor %}
+</div>
+{% endblock %}
